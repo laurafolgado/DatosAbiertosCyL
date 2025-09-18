@@ -1,2 +1,2 @@
-# Datos Abiertos CyL
-Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional
+# Datos Abiertos de la Junta de Castilla y León
+Repositorio con ejemplos de uso de datos abiertos de la Junta de Castilla y León para estudiantes de Formación Profesional, del ciclo de Desarrollo de Aplicaciones Web

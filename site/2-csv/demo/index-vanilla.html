@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1" />
+  <title>Demo (Vanilla) – Hostelería a domicilio (CSV)</title>
+  <style>
+   :root {
+  color-scheme: light dark;
+  --brand-primary: #ba273b;
+  --brand-primary-700: #8f1f2d;
+  --brand-primary-050: #f8e9ec;
+
+  --bg: canvas;
+  --fg: canvastext;
+  --muted: color-mix(in srgb, var(--fg), transparent 58%);
+  --border: color-mix(in srgb, var(--fg), transparent 85%);
+  --row-hover: color-mix(in srgb, var(--bg), var(--fg) 4%);
+  --mark-bg: color-mix(in srgb, #ffe58f, var(--bg) 40%);
+  --mark-border: #f1c40f;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap");
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+  margin: 0; padding: 1.25rem; line-height: 1.5; background: var(--bg); color: var(--fg);
+}
+header { margin-bottom: 1rem; }
+h1 { margin: 0; font-family: "Montserrat", Inter, system-ui; font-weight: 700;
+     color: var(--brand-primary); font-size: clamp(1.15rem, 1.9vw, 1.5rem); }
+.hint { margin-top: .35rem; font-size: .92rem; color: var(--muted); }
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: clip;
+  background: var(--bg);
+  box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 10px 30px rgba(0,0,0,.04);
+}
+
+.toolbar {
+  display: grid; grid-template-columns: 1fr auto auto; gap: .75rem;
+  padding: .85rem .95rem; border-bottom: 1px solid var(--border); align-items: center;
+}
+.toolbar input[type="search"] {
+  padding: .55rem .7rem; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); outline: none;
+}
+.toolbar input[type="search"]:focus { border-color: var(--brand-primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-primary), transparent 80%); }
+.toolbar .chip {
+  display: inline-flex; align-items: center; gap: .45rem;
+  background: var(--brand-primary-050); color: var(--brand-primary-700);
+  border: 1px solid color-mix(in srgb, var(--brand-primary), transparent 75%);
+  border-radius: 999px; padding: .35rem .65rem; font-size: .85rem; font-weight: 600;
+}
+.toolbar select {
+  padding: .45rem .5rem; border-radius: 10px; border: 1px solid var(--border); background: var(--bg);
+}
+
+figure.table { margin: 0; }
+figcaption {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .65rem .95rem; font-size: .92rem; color: var(--brand-primary-700);
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-primary), transparent 82%);
+  background: var(--brand-primary-050);
+}
+
+.table-wrap { overflow: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+thead th {
+  position: sticky; top: 0; background: var(--bg); z-index: 1;
+  text-align: left; padding: .55rem .7rem; border-bottom: 2px solid var(--brand-primary-050);
+  cursor: pointer; white-space: nowrap; color: var(--brand-primary-700);
+}
+thead th .sort-ind { opacity: .6; margin-left: .25rem; }
+tbody td {
+  padding: .5rem .7rem; border-bottom: 1px solid var(--border); vertical-align: top; max-width: 35ch; overflow-wrap: anywhere;
+}
+tbody tr:nth-child(even) { background: color-mix(in srgb, var(--bg), var(--fg) 3%); }
+tbody tr:hover { background: var(--row-hover); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+a { color: var(--brand-primary); text-decoration: none; }
+a:hover { color: var(--brand-primary-700); text-decoration: underline; }
+
+mark {
+  background: var(--mark-bg);
+  border: 1px solid var(--mark-border);
+  border-radius: 4px;
+  padding: 0 .12em;
+}
+
+.footer {
+  display: flex; justify-content: space-between; align-items: center; gap: .75rem;
+  padding: .65rem .95rem; font-size: .9rem; color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.pagination { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.pagination button, .pagination select {
+  padding: .45rem .6rem; border-radius: 10px; border: 1px solid var(--border); background: var(--bg);
+}
+.status { font-size: .95rem; }
+
+@media (max-width: 720px) {
+  .toolbar { grid-template-columns: 1fr; }
+  figcaption { flex-direction: column; align-items: flex-start; gap: .35rem; }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo en vivo (Vanilla) · Hostelería a domicilio (CSV · JCyL)</h1>
+    <p class="hint">Sin librerías: parser CSV básico, tabla, búsqueda, ordenación y paginación. Abre con servidor local.</p>
+  </header>
+
+  <section class="toolbar" aria-label="Controles de filtrado y vista">
+    <input id="q" type="search" placeholder="Buscar en cualquier columna…" aria-label="Buscar" />
+    <label>
+      Tamaño de página:
+      <select id="pageSize" aria-label="Tamaño de página">
+        <option value="10" selected>10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+      </select>
+    </label>
+    <span id="counter" class="counter" aria-live="polite">Cargando…</span>
+  </section>
+
+  <div class="table-wrap" role="region" aria-label="Resultados en tabla">
+    <table id="tabla" aria-describedby="counter">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <nav class="pagination" aria-label="Paginación">
+    <button id="first" type="button">« Primero</button>
+    <button id="prev" type="button">‹ Anterior</button>
+    <span id="pageInfo" aria-live="polite">—</span>
+    <button id="next" type="button">Siguiente ›</button>
+    <button id="last" type="button">Último »</button>
+  </nav>
+
+  <p id="status" class="status" aria-live="polite"></p>
+
+  <footer>
+    Fuente: Datos Abiertos de la Junta de Castilla y León · Dataset “Hostelería a domicilio” (CSV).
+  </footer>
+
+  <script type="module">
+    const CSV_URL = "./hosteleria-a-domicilio.csv";
+
+    const q = document.getElementById("q");
+    const pageSizeSel = document.getElementById("pageSize");
+    const counter = document.getElementById("counter");
+    const status = document.getElementById("status");
+    const thead = document.querySelector("#tabla thead");
+    const tbody = document.querySelector("#tabla tbody");
+    const firstBtn = document.getElementById("first");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+    const lastBtn = document.getElementById("last");
+    const pageInfo = document.getElementById("pageInfo");
+
+    function setStatus(msg) { status.textContent = msg; }
+    function setCounter(n) { counter.textContent = Number.isFinite(n) ? `${n} resultados` : String(n); }
+
+    // --- CSV parser (vanilla) ---
+    // Soporta: , o ; como separador, campos entrecomillados y dobles comillas escapadas "".
+    function detectDelimiter(sampleText) {
+      // Simple heurística: contar comas vs puntos y coma en primeras líneas
+      const lines = sampleText.split(/\r?\n/).slice(0, 5);
+      const counts = lines.map(l => ({
+        comma: (l.match(/,/g) || []).length,
+        semi: (l.match(/;/g) || []).length,
+      }));
+      const sumComma = counts.reduce((a, c) => a + c.comma, 0);
+      const sumSemi = counts.reduce((a, c) => a + c.semi, 0);
+      return sumSemi > sumComma ? ";" : ",";
+    }
+
+    function parseCSV(text, delimiter = ",") {
+      const rows = [];
+      let i = 0, field = "", row = [], inQuotes = false;
+
+      const pushField = () => { row.push(field); field = ""; };
+      const pushRow = () => { rows.push(row); row = []; };
+
+      while (i < text.length) {
+        const ch = text[i];
+
+        if (inQuotes) {
+          if (ch === '"') {
+            // Mirar si es comilla escapada ("")
+            if (text[i + 1] === '"') {
+              field += '"'; i += 2; continue;
+            } else {
+              inQuotes = false; i++; continue;
+            }
+          } else {
+            field += ch; i++; continue;
+          }
+        } else {
+          if (ch === '"') { inQuotes = true; i++; continue; }
+          if (ch === delimiter) { pushField(); i++; continue; }
+          if (ch === '\n') { pushField(); pushRow(); i++; continue; }
+          if (ch === '\r') { // soportar CRLF
+            // Si siguiente es \n, saltarlo
+            if (text[i + 1] === '\n') i++;
+            pushField(); pushRow(); i++; continue;
+          }
+          field += ch; i++;
+        }
+      }
+      // último campo/fila si no hay salto final
+      pushField();
+      if (row.length > 1 || (row.length === 1 && row[0] !== "")) pushRow();
+
+      return rows;
+    }
+
+    // --- Estado global de la tabla ---
+    let originalRows = [];   // objetos completos
+    let viewRows = [];       // filtrados y ordenados
+    let columns = [];        // nombres de columnas
+    let sortState = { key: null, dir: 0 }; // 0 sin ordenar, 1 asc, -1 desc
+    let pageSize = Number(pageSizeSel.value);
+    let page = 1;
+
+    function normalizeObjects(rows2D) {
+      if (rows2D.length === 0) return [];
+      const headers = rows2D[0].map(h => h.trim());
+      columns = headers;
+      const out = [];
+      for (let r = 1; r < rows2D.length; r++) {
+        const obj = Object.fromEntries(headers.map((h, i) => [h, rows2D[r][i] ?? ""]));
+        out.push(obj);
+      }
+      return out;
+    }
+
+    function renderHeader() {
+      thead.innerHTML = "";
+      const tr = document.createElement("tr");
+      for (const col of columns) {
+        const th = document.createElement("th");
+        th.scope = "col";
+        th.textContent = col;
+        th.tabIndex = 0;
+        th.classList.add("sort");
+        if (sortState.key === col) {
+          th.classList.add(sortState.dir === 1 ? "asc" : "desc");
+        }
+        th.addEventListener("click", () => toggleSort(col));
+        th.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleSort(col); }
+        });
+        tr.appendChild(th);
+      }
+      thead.appendChild(tr);
+    }
+
+    function toggleSort(col) {
+      if (sortState.key !== col) {
+        sortState = { key: col, dir: 1 };
+      } else {
+        sortState.dir = sortState.dir === 1 ? -1 : sortState.dir === -1 ? 0 : 1;
+        if (sortState.dir === 0) sortState.key = null;
+      }
+      applyFiltersAndSort();
+      render();
+    }
+
+    function applyFiltersAndSort() {
+      // Filtro global
+      const term = q.value.trim().toLowerCase();
+      viewRows = term
+        ? originalRows.filter(obj =>
+            Object.values(obj).some(v => String(v ?? "").toLowerCase().includes(term)))
+        : [...originalRows];
+
+      // Orden
+      if (sortState.key && sortState.dir) {
+        const key = sortState.key;
+        const dir = sortState.dir;
+        viewRows.sort((a, b) => {
+          const va = String(a[key] ?? "");
+          const vb = String(b[key] ?? "");
+          return dir * va.localeCompare(vb, "es", { numeric: true, sensitivity: "base" });
+        });
+      }
+
+      // Resetear página si nos quedamos fuera de rango
+      const totalPages = Math.max(1, Math.ceil(viewRows.length / pageSize));
+      if (page > totalPages) page = totalPages;
+      setCounter(viewRows.length);
+    }
+
+    function render() {
+      renderHeader();
+
+      // Paginación
+      const total = viewRows.length;
+      const totalPages = Math.max(1, Math.ceil(total / pageSize));
+      const start = (page - 1) * pageSize;
+      const end = Math.min(start + pageSize, total);
+      const slice = viewRows.slice(start, end);
+
+      // Cuerpo
+      tbody.innerHTML = "";
+      for (const row of slice) {
+        const tr = document.createElement("tr");
+        for (const col of columns) {
+          const td = document.createElement("td");
+          td.textContent = row[col] ?? "";
+          tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+      }
+
+      // Controles de paginación
+      firstBtn.disabled = page <= 1;
+      prevBtn.disabled = page <= 1;
+      nextBtn.disabled = page >= totalPages;
+      lastBtn.disabled = page >= totalPages;
+      pageInfo.textContent = `Página ${page} de ${totalPages}`;
+    }
+
+    // Eventos UI
+    q.addEventListener("input", () => { page = 1; applyFiltersAndSort(); render(); });
+    pageSizeSel.addEventListener("change", () => {
+      pageSize = Number(pageSizeSel.value);
+      page = 1;
+      applyFiltersAndSort();
+      render();
+    });
+    firstBtn.addEventListener("click", () => { page = 1; render(); });
+    prevBtn.addEventListener("click", () => { if (page > 1) page--; render(); });
+    nextBtn.addEventListener("click", () => { const tp = Math.ceil(viewRows.length / pageSize); if (page < tp) page++; render(); });
+    lastBtn.addEventListener("click", () => { page = Math.max(1, Math.ceil(viewRows.length / pageSize)); render(); });
+
+    // Carga de datos
+    async function load() {
+      try {
+        setStatus("Descargando CSV…");
+        const res = await fetch(CSV_URL, { cache: "no-cache" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+
+        setStatus("Detectando separador y parseando…");
+        const delimiter = detectDelimiter(text);
+        const rows2D = parseCSV(text, delimiter);
+
+        if (!rows2D.length) throw new Error("CSV vacío o mal formado.");
+        originalRows = normalizeObjects(rows2D);
+        applyFiltersAndSort();
+        render();
+        setStatus("✅ Listo");
+      } catch (err) {
+        console.error(err);
+        setStatus("❌ Error al cargar o procesar el CSV. Revisa la ruta y usa un servidor local.");
+        setCounter("—");
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>
