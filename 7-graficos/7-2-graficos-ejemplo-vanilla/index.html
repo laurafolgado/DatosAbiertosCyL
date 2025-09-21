@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../0-2-gobierno-abierto/">
+        <link rel="prev" href="../7-1-graficos-leccion/">
       
       
-        <link rel="next" href="../../1-fetch/1-1-fetch-leccion/">
+        <link rel="next" href="../7-3-graficos-ejemplo-libreria/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>0.3 Tipos de datos abiertos y formas de acceso - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
+        <title>7.2 Ej. Gráficos con JS puro - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-tipos-de-datos-abiertos-y-formas-de-acceso" class="md-skip">
+        <a href="#72-ejemplo-con-javascript-puro-vanilla-grafico" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              0.3 Tipos de datos abiertos y formas de acceso
+              7.2 Ej. Gráficos con JS puro
             
           </span>
         </div>
@@ -231,10 +231,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -253,11 +251,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -273,7 +273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Introducción
@@ -287,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-1-introduccion-datos-abiertos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
         
   
   
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-2-gobierno-abierto/" class="md-nav__link">
+      <a href="../../0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
         
   
   
@@ -330,32 +330,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    0.3 Tipos de datos abiertos y formas de acceso
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../0-presentacion/0-3-tipos-datos/" class="md-nav__link">
         
   
   
@@ -366,71 +344,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 Preguntas de reflexión
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1321,8 +1234,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1343,13 +1258,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -1365,7 +1278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             7. Gráficos
@@ -1379,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7-graficos/7-1-graficos-leccion/" class="md-nav__link">
+      <a href="../7-1-graficos-leccion/" class="md-nav__link">
         
   
   
@@ -1399,10 +1312,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    7.2 Ej. Gráficos con JS puro
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1413,6 +1348,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con vanilla JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-html-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) HTML base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cargar-y-parsear-el-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Cargar y parsear el CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-filtrar-por-ano-ej-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Filtrar por año (ej. 2020)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dibujar-grafico-en-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Dibujar gráfico en canvas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ponerlo-todo-junto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Ponerlo todo junto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1425,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
+      <a href="../7-3-graficos-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1448,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7-graficos/7-4-graficos-demo/" class="md-nav__link">
+      <a href="../7-4-graficos-demo/" class="md-nav__link">
         
   
   
@@ -1652,45 +1685,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
+      📌 Flujo de trabajo con vanilla JS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-html-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) HTML base
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-cargar-y-parsear-el-csv" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
+      2) Cargar y parsear el CSV
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-filtrar-por-ano-ej-2020" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
+      3) Filtrar por año (ej. 2020)
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dibujar-grafico-en-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Dibujar gráfico en canvas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ponerlo-todo-junto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Ponerlo todo junto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
     <span class="md-ellipsis">
-      📝 Preguntas de reflexión
+      📝 Preguntas de repaso
     </span>
   </a>
   
@@ -1712,100 +1778,118 @@
 
 
 
-<h1 id="03-tipos-de-datos-abiertos-y-formas-de-acceso">0.3. Tipos de datos abiertos y formas de acceso</h1>
-<p>En el portal de <strong>Datos Abiertos de la Junta de Castilla y León</strong> no todos los datos se presentan de la misma manera.
-Según el <strong>formato en el que estén publicados</strong>, necesitaremos estrategias distintas para acceder, interpretar y utilizarlos en nuestras aplicaciones.</p>
-<p>Los formatos más habituales son: <strong>CSV, JSON, XML y APIs REST</strong>. Cada uno tiene sus características, ventajas y retos.</p>
+<h1 id="72-ejemplo-con-javascript-puro-vanilla-grafico">7.2. Ejemplo con JavaScript puro (vanilla) – Gráfico</h1>
+<p>En este ejemplo vamos a crear un gráfico de <strong>barras</strong> usando únicamente la API de <strong>Canvas</strong> de HTML5, sin librerías externas.
+El dataset será el de <strong>estadísticas de uso de redes sociales</strong> de la Junta de Castilla y León.</p>
 <hr />
-<h2 id="archivos-csv-comma-separated-values">📌 Archivos CSV (Comma Separated Values)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto donde cada línea representa un registro y cada columna está separada por comas (<code>,</code>), aunque a veces se usa el punto y coma (<code>;</code>).</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Muy sencillos de entender.</li>
-<li>Compatibles con Excel, Google Sheets y cualquier editor de texto.</li>
-<li>Ideales para información tabular (listados, estadísticas, directorios).</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No incluyen estructura jerárquica: solo filas y columnas.</li>
-<li>A veces es difícil manejar campos con comillas o saltos de línea.</li>
-<li>Si el dataset es grande, puede volverse pesado de procesar en el navegador.</li>
-</ul>
-</li>
-</ul>
+<h2 id="flujo-de-trabajo-con-vanilla-js">📌 Flujo de trabajo con vanilla JS</h2>
+<ol>
+<li><strong>Cargar el CSV</strong> con <code>fetch</code>.</li>
+<li><strong>Parsearlo a objetos</strong> (como en los ejemplos anteriores).</li>
+<li><strong>Filtrar los datos</strong> de un año concreto.</li>
+<li><strong>Configurar las dimensiones del canvas</strong>.</li>
+<li><strong>Calcular escalas</strong> para representar porcentajes como alturas de barras.</li>
+<li><strong>Dibujar ejes, etiquetas y barras</strong> con la API <code>CanvasRenderingContext2D</code>.</li>
+</ol>
 <hr />
-<h2 id="archivos-json-javascript-object-notation">📌 Archivos JSON (JavaScript Object Notation)</h2>
-<ul>
-<li><strong>Cómo son</strong>: texto estructurado con <strong>objetos y arrays</strong> anidados, muy usado en aplicaciones web.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Es el formato “nativo” de JavaScript: fácil de convertir en objetos del lenguaje.</li>
-<li>Permite estructuras complejas (listas dentro de listas, objetos dentro de objetos).</li>
-<li>Ampliamente utilizado en APIs modernas.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No es tan cómodo para abrir en Excel o editores de texto no técnicos.</li>
-<li>Puede ser más difícil de leer a simple vista que un CSV.</li>
-</ul>
-</li>
-</ul>
+<h2 id="codigo-paso-a-paso">🧩 Código paso a paso</h2>
+<h3 id="1-html-base">1) HTML base</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;grafico&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Gráfico de uso de redes sociales&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;img&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</code></pre></div>
 <hr />
-<h2 id="archivos-xml-extensible-markup-language">📌 Archivos XML (eXtensible Markup Language)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto con etiquetas anidadas, muy parecidos al HTML.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Soporta estructuras jerárquicas complejas.</li>
-<li>Estándar muy extendido en la administración pública y organismos internacionales.</li>
-<li>Puede incluir metadatos y atributos junto con el contenido.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Es más verboso y pesado que JSON.</li>
-<li>Requiere usar parsers para convertirlo a estructuras manejables en JavaScript.</li>
-<li>Puede incluir espacios de nombres (namespaces) que complican el acceso a los datos.</li>
-</ul>
-</li>
-</ul>
+<h3 id="2-cargar-y-parsear-el-csv">2) Cargar y parsear el CSV</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;datasets/csv/estadisticas-de-uso-de-redes-sociales.csv&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">lineas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">cabeceras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lineas</span><span class="p">.</span><span class="nx">shift</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">lineas</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">linea</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">linea</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">fromEntries</span><span class="p">(</span><span class="nx">cabeceras</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">valores</span><span class="p">[</span><span class="nx">i</span><span class="p">]]));</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="apis-rest-servicios-de-datos-en-linea">📌 APIs REST (servicios de datos en línea)</h2>
-<ul>
-<li><strong>Cómo son</strong>: interfaces web que permiten consultar los datos directamente desde los servidores de la administración.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Siempre devuelven la información <strong>actualizada en tiempo real</strong>.</li>
-<li>Permiten filtrar, paginar o buscar datos concretos con parámetros en la URL.</li>
-<li>Normalmente devuelven datos en JSON o XML.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Requieren conexión a Internet en el momento de la consulta.</li>
-<li>A veces necesitan cabeceras específicas o autenticación con tokens.</li>
-<li>Si la API cambia su formato, el código de nuestra aplicación debe adaptarse.</li>
-</ul>
-</li>
-</ul>
+<h3 id="3-filtrar-por-ano-ej-2020">3) Filtrar por año (ej. 2020)</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">filtrarPorAno</span><span class="p">(</span><span class="nx">datos</span><span class="p">,</span><span class="w"> </span><span class="nx">ano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">Año</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">ano</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="4-dibujar-grafico-en-canvas">4) Dibujar gráfico en canvas</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">dibujarGrafico</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">,</span><span class="w"> </span><span class="nx">alto</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">margen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">anchoBarra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">ancho</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">margen</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">maxValor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">datos</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">Porcentaje</span><span class="p">)));</span>
+
+<span class="w">  </span><span class="c1">// Eje Y</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">margen</span><span class="p">,</span><span class="w"> </span><span class="nx">margen</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">margen</span><span class="p">,</span><span class="w"> </span><span class="nx">alto</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margen</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Eje X</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">margen</span><span class="p">,</span><span class="w"> </span><span class="nx">alto</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margen</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">ancho</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margen</span><span class="p">,</span><span class="w"> </span><span class="nx">alto</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margen</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Dibujar barras</span>
+<span class="w">  </span><span class="nx">datos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">Porcentaje</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">valor</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">maxValor</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nx">alto</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">margen</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">margen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">anchoBarra</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margen</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">altura</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;#ba273b&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// rojo corporativo JCyL</span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">anchoBarra</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="nx">altura</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Etiqueta X</span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;black&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;12px sans-serif&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">Red</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">alto</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">margen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">15</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Etiqueta valor</span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="nx">valor</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;%&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="5-ponerlo-todo-junto">5) Ponerlo todo junto</h3>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">datos2020</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filtrarPorAno</span><span class="p">(</span><span class="nx">datos</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2020&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;grafico&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nx">dibujarGrafico</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">datos2020</span><span class="p">);</span>
+<span class="p">})();</span>
+</code></pre></div>
 <hr />
 <div class="admonition tip">
 <p class="admonition-title">Consejo</p>
-<p>Como desarrolladoras y desarrolladores, es importante elegir <strong>el formato adecuado para cada caso de uso</strong>:</p>
-<ul>
-<li>Si necesitas <strong>listas simples</strong> → CSV.  </li>
-<li>Si quieres <strong>estructuras jerárquicas y directas para JavaScript</strong> → JSON.  </li>
-<li>Si trabajas con <strong>fuentes institucionales antiguas</strong> → XML.  </li>
-<li>Si necesitas <strong>datos actualizados al momento y filtrables</strong> → API REST.  </li>
-</ul>
 </div>
+<p>Este enfoque con <strong>Canvas</strong> te ayuda a comprender cómo se dibujan gráficos “desde cero”.
+Sin embargo, si quieres añadir leyendas, escalas automáticas o varios tipos de gráficos, es más práctico usar una librería como <strong>Chart.js</strong>.</p>
 <hr />
-<h2 id="preguntas-de-reflexion">📝 Preguntas de reflexión</h2>
+<h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
 <div class="admonition question">
 <p class="admonition-title">Repaso</p>
-<ol>
-<li>¿Qué diferencias fundamentales hay entre CSV y JSON?</li>
-<li>¿Qué ventajas tiene usar JSON frente a XML en aplicaciones web modernas?</li>
-<li>¿Por qué una API puede ser más útil que descargar un archivo estático?</li>
-<li>¿Qué problemas podrían surgir al trabajar con un CSV de gran tamaño en el navegador?</li>
-<li>Si quisieras mostrar un mapa con ubicaciones de monumentos, ¿qué formato te resultaría más práctico y por qué?</li>
-</ol>
 </div>
+<p>1. ¿Qué representa el valor <code>maxValor</code> en el código del gráfico?
+2. ¿Por qué normalizamos las alturas de las barras en función del valor máximo?
+3. ¿Qué función del canvas usamos para dibujar rectángulos (barras)?
+4. ¿Cómo cambiarías el código para representar el año 2021 en lugar de 2020?
+5. ¿Qué limitaciones tiene este enfoque frente a una librería especializada en gráficos?</p>
 
 
 

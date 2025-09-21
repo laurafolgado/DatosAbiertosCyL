@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../1-1-fetch-leccion/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../2-csv/2-1-csv-leccion/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
-        <title>Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
+        <title>1.2 Ejemplo con JavaScript puro (vanilla) - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,9 +48,9 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap">
     
-      <link rel="stylesheet" href="/jcyl.css">
+      <link rel="stylesheet" href="../../jcyl.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#12-ejemplo-con-javascript-puro-vanilla-fetch-y-promesas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-header__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
+    <a href="../.." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-header__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
       
-  <img src="/assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              1.2 Ejemplo con JavaScript puro (vanilla)
             
           </span>
         </div>
@@ -208,9 +217,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-nav__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
+    <a href="../.." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-nav__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
       
-  <img src="/assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional
@@ -278,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
         
   
   
@@ -301,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
+      <a href="../../0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
         
   
   
@@ -324,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-3-tipos-datos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-3-tipos-datos/" class="md-nav__link">
         
   
   
@@ -351,8 +360,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -369,13 +380,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -391,7 +400,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             1. Fundamentos de Fetch, promesas y async/await
@@ -405,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-fetch/1-1-fetch-leccion/" class="md-nav__link">
+      <a href="../1-1-fetch-leccion/" class="md-nav__link">
         
   
   
@@ -425,10 +434,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/1-fetch/1-2-fetch-ejemplo-vanilla/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1.2 Ejemplo con JavaScript puro (vanilla)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -439,6 +470,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con vanilla JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-un-archivo-de-texto-fotogramas-aereos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar un archivo de texto (fotogramas aéreos)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cargar-un-archivo-json-marcas-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Cargar un archivo JSON (marcas de calidad)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-recorrer-el-json-y-mostrar-datos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Recorrer el JSON y mostrar datos concretos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -513,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-1-csv-leccion/" class="md-nav__link">
+      <a href="../../2-csv/2-1-csv-leccion/" class="md-nav__link">
         
   
   
@@ -536,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-2-csv-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../2-csv/2-2-csv-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -559,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-3-csv-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../2-csv/2-3-csv-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -582,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-4-csv-demo/" class="md-nav__link">
+      <a href="../../2-csv/2-4-csv-demo/" class="md-nav__link">
         
   
   
@@ -667,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-1-xml-leccion/" class="md-nav__link">
+      <a href="../../3-xml/3-1-xml-leccion/" class="md-nav__link">
         
   
   
@@ -690,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-2-xml-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../3-xml/3-2-xml-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -713,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-3-xml-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../3-xml/3-3-xml-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -736,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-4-xml-demo/" class="md-nav__link">
+      <a href="../../3-xml/3-4-xml-demo/" class="md-nav__link">
         
   
   
@@ -821,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-1-json-leccion/" class="md-nav__link">
+      <a href="../../4-json/4-1-json-leccion/" class="md-nav__link">
         
   
   
@@ -844,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-2-json-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../4-json/4-2-json-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -867,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-3-json-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../4-json/4-3-json-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -890,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-4-json-demo/" class="md-nav__link">
+      <a href="../../4-json/4-4-json-demo/" class="md-nav__link">
         
   
   
@@ -975,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-1-api-leccion/" class="md-nav__link">
+      <a href="../../5-api/5-1-api-leccion/" class="md-nav__link">
         
   
   
@@ -998,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-2-api-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../5-api/5-2-api-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1021,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-3-api-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../5-api/5-3-api-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1044,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-4-api-demo/" class="md-nav__link">
+      <a href="../../5-api/5-4-api-demo/" class="md-nav__link">
         
   
   
@@ -1129,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-1-tablas-leccion/" class="md-nav__link">
+      <a href="../../6-tablas/6-1-tablas-leccion/" class="md-nav__link">
         
   
   
@@ -1152,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-2-tablas-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../6-tablas/6-2-tablas-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1175,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-3-tablas-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../6-tablas/6-3-tablas-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1198,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-4-tablas-demo/" class="md-nav__link">
+      <a href="../../6-tablas/6-4-tablas-demo/" class="md-nav__link">
         
   
   
@@ -1283,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-1-graficos-leccion/" class="md-nav__link">
+      <a href="../../7-graficos/7-1-graficos-leccion/" class="md-nav__link">
         
   
   
@@ -1306,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1329,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1352,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-4-graficos-demo/" class="md-nav__link">
+      <a href="../../7-graficos/7-4-graficos-demo/" class="md-nav__link">
         
   
   
@@ -1437,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-1-mapas-leccion/" class="md-nav__link">
+      <a href="../../8-mapas/8-1-mapas-leccion/" class="md-nav__link">
         
   
   
@@ -1460,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-2-mapas-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../8-mapas/8-2-mapas-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1483,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-3-mapas-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../8-mapas/8-3-mapas-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1506,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-4-mapas-demo/" class="md-nav__link">
+      <a href="../../8-mapas/8-4-mapas-demo/" class="md-nav__link">
         
   
   
@@ -1546,6 +1657,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con vanilla JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-un-archivo-de-texto-fotogramas-aereos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar un archivo de texto (fotogramas aéreos)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cargar-un-archivo-json-marcas-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Cargar un archivo JSON (marcas de calidad)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-recorrer-el-json-y-mostrar-datos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Recorrer el JSON y mostrar datos concretos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1557,8 +1738,109 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="12-ejemplo-con-javascript-puro-vanilla-fetch-y-promesas">1.2. Ejemplo con JavaScript puro (vanilla) – <code>fetch</code> y promesas</h1>
+<p>En este ejemplo aprenderás a <strong>cargar datos desde un archivo remoto</strong> usando la función <strong><code>fetch</code></strong> del navegador.
+Usaremos dos ejemplos reales del portal de datos abiertos de Castilla y León:</p>
+<ul>
+<li>Un archivo <strong>TXT</strong> con metadatos de fotogramas aéreos históricos (<code>Leeme.txt</code>).</li>
+<li>Un archivo <strong>JSON</strong> con las <strong>marcas de calidad agroalimentarias</strong> de la región (<code>garant.json</code>).</li>
+</ul>
+<hr />
+<h2 id="flujo-de-trabajo-con-vanilla-js">📌 Flujo de trabajo con vanilla JS</h2>
+<ol>
+<li><strong>Llamar a <code>fetch</code></strong> indicando la URL del recurso.</li>
+<li><strong>Esperar la respuesta</strong> y comprobar que sea correcta (<code>res.ok</code>).</li>
+<li><strong>Convertir el contenido</strong> a texto (<code>.text()</code>) o a objeto (<code>.json()</code>).</li>
+<li><strong>Usar el resultado</strong>: mostrarlo en consola o recorrerlo.</li>
+<li><strong>Gestionar errores</strong> con <code>.catch()</code> o <code>try/catch</code>.</li>
+</ol>
+<hr />
+<h2 id="codigo-paso-a-paso">🧩 Código paso a paso</h2>
+<h3 id="1-cargar-un-archivo-de-texto-fotogramas-aereos">1) Cargar un archivo de texto (fotogramas aéreos)</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarTXT</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://ftp.itacyl.es/cartografia/03_FotogramasAereos/Vuelo-Americano_1956-57/Leeme.txt&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`HTTP </span><span class="si">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Contenido del TXT:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error al cargar el TXT:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">cargarTXT</span><span class="p">();</span>
+</code></pre></div>
+<p>Aquí usamos <code>.text()</code> porque el archivo es un <strong>documento de texto plano</strong>.
+Mostramos solo los <strong>primeros 300 caracteres</strong> para no llenar la consola.</p>
+<hr />
+<h3 id="2-cargar-un-archivo-json-marcas-de-calidad">2) Cargar un archivo JSON (marcas de calidad)</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarJSON</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://servicios.itacyl.es/resources/public/opendata/garant.json&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`HTTP </span><span class="si">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Objeto JSON completo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">datos</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error al cargar el JSON:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">cargarJSON</span><span class="p">();</span>
+</code></pre></div>
+<p>Aquí usamos <code>.json()</code> porque el archivo contiene datos en formato JSON.
+El resultado ya es un <strong>objeto JavaScript</strong> que podemos recorrer.</p>
+<hr />
+<h3 id="3-recorrer-el-json-y-mostrar-datos-concretos">3) Recorrer el JSON y mostrar datos concretos</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarMarcas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://servicios.itacyl.es/resources/public/opendata/garant.json&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+
+<span class="w">  </span><span class="nx">datos</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">marca</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`🥇 </span><span class="si">${</span><span class="nx">marca</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> (</span><span class="si">${</span><span class="nx">marca</span><span class="p">.</span><span class="nx">tipo</span><span class="si">}</span><span class="sb">)`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">mostrarMarcas</span><span class="p">();</span>
+</code></pre></div>
+<p>Esto imprime en consola las 5 primeras marcas de calidad con su nombre y tipo.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Consejo</p>
+</div>
+<p>Cuando trabajes con <code>fetch</code>:
+* Usa <code>await res.text()</code> para ficheros planos como <code>.txt</code> o <code>.csv</code>.
+* Usa <code>await res.json()</code> solo si el archivo realmente es JSON.
+* Comprueba siempre <code>res.ok</code> para detectar errores como <code>404 Not Found</code>.
+* Muestra solo una parte con <code>.slice()</code> si el dataset es muy grande.</p>
+<hr />
+<h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
+<div class="admonition question">
+<p class="admonition-title">Repaso</p>
+<ol>
+<li>¿Qué diferencia hay entre usar <code>.text()</code> y <code>.json()</code>?</li>
+<li>¿Qué significa <code>res.ok</code> y por qué es importante comprobarlo?</li>
+<li>¿Qué ocurre si intentamos usar <code>.json()</code> en un TXT?</li>
+<li>¿Cómo mostrarías solo las primeras 10 líneas de un TXT cargado con <code>fetch</code>?</li>
+<li>¿Por qué es útil usar datasets reales (como fotogramas aéreos o marcas de calidad) en vez de ejemplos inventados?</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1599,10 +1881,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "header.autohide", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.linked"], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "header.autohide", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.linked"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>

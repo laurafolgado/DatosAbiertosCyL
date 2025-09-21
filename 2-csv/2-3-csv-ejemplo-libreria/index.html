@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../0-2-gobierno-abierto/">
+        <link rel="prev" href="../2-2-csv-ejemplo-vanilla/">
       
       
-        <link rel="next" href="../../1-fetch/1-1-fetch-leccion/">
+        <link rel="next" href="../2-4-csv-demo/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>0.3 Tipos de datos abiertos y formas de acceso - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
+        <title>2.3 Ej. Librerías Papa Parse + Tabulator - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-tipos-de-datos-abiertos-y-formas-de-acceso" class="md-skip">
+        <a href="#23-ejemplo-con-libreria-papa-parse-tabulator" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              0.3 Tipos de datos abiertos y formas de acceso
+              2.3 Ej. Librerías Papa Parse + Tabulator
             
           </span>
         </div>
@@ -231,10 +231,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -253,11 +251,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -273,7 +273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Introducción
@@ -287,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-1-introduccion-datos-abiertos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
         
   
   
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-2-gobierno-abierto/" class="md-nav__link">
+      <a href="../../0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
         
   
   
@@ -330,32 +330,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    0.3 Tipos de datos abiertos y formas de acceso
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../0-presentacion/0-3-tipos-datos/" class="md-nav__link">
         
   
   
@@ -366,71 +344,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 Preguntas de reflexión
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -551,8 +464,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -573,13 +488,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -595,7 +508,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             2. CSV
@@ -609,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2-csv/2-1-csv-leccion/" class="md-nav__link">
+      <a href="../2-1-csv-leccion/" class="md-nav__link">
         
   
   
@@ -632,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2-csv/2-2-csv-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../2-2-csv-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -652,10 +565,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../2-csv/2-3-csv-ejemplo-libreria/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    2.3 Ej. Librerías Papa Parse + Tabulator
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -666,6 +601,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-incluir-las-librerias" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Cómo incluir las librerías
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-libreria" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con librería
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-y-parsear-el-csv-con-papa-parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar y parsear el CSV con Papa Parse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-generar-columnas-automaticamente-para-tabulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Generar columnas automáticamente para Tabulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pintar-la-tabla-con-tabulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Pintar la tabla con Tabulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-busqueda-global-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Búsqueda global (opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ponerlo-todo-junto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Ponerlo todo junto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-con-el-enfoque-vanilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚖️ Comparación con el enfoque vanilla
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -678,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2-csv/2-4-csv-demo/" class="md-nav__link">
+      <a href="../2-4-csv-demo/" class="md-nav__link">
         
   
   
@@ -1652,45 +1703,96 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
+  <a href="#como-incluir-las-librerias" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
+      📦 Cómo incluir las librerías
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
+  <a href="#flujo-de-trabajo-con-libreria" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
+      📌 Flujo de trabajo con librería
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-y-parsear-el-csv-con-papa-parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar y parsear el CSV con Papa Parse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-generar-columnas-automaticamente-para-tabulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Generar columnas automáticamente para Tabulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pintar-la-tabla-con-tabulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Pintar la tabla con Tabulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-busqueda-global-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Búsqueda global (opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ponerlo-todo-junto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Ponerlo todo junto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-con-el-enfoque-vanilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚖️ Comparación con el enfoque vanilla
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 Preguntas de reflexión
+      📝 Preguntas de repaso
     </span>
   </a>
   
@@ -1712,98 +1814,193 @@
 
 
 
-<h1 id="03-tipos-de-datos-abiertos-y-formas-de-acceso">0.3. Tipos de datos abiertos y formas de acceso</h1>
-<p>En el portal de <strong>Datos Abiertos de la Junta de Castilla y León</strong> no todos los datos se presentan de la misma manera.
-Según el <strong>formato en el que estén publicados</strong>, necesitaremos estrategias distintas para acceder, interpretar y utilizarlos en nuestras aplicaciones.</p>
-<p>Los formatos más habituales son: <strong>CSV, JSON, XML y APIs REST</strong>. Cada uno tiene sus características, ventajas y retos.</p>
+<h1 id="23-ejemplo-con-libreria-papa-parse-tabulator">2.3. Ejemplo con librería (Papa Parse + Tabulator)</h1>
+<p>En este apartado vamos a ver cómo procesar un CSV utilizando <strong>librerías externas</strong> para simplificar el parseo y la visualización.<br />
+Trabajaremos con el dataset de <strong>hostelería a domicilio</strong> de la Junta de Castilla y León en formato CSV.</p>
 <hr />
-<h2 id="archivos-csv-comma-separated-values">📌 Archivos CSV (Comma Separated Values)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto donde cada línea representa un registro y cada columna está separada por comas (<code>,</code>), aunque a veces se usa el punto y coma (<code>;</code>).</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Muy sencillos de entender.</li>
-<li>Compatibles con Excel, Google Sheets y cualquier editor de texto.</li>
-<li>Ideales para información tabular (listados, estadísticas, directorios).</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No incluyen estructura jerárquica: solo filas y columnas.</li>
-<li>A veces es difícil manejar campos con comillas o saltos de línea.</li>
-<li>Si el dataset es grande, puede volverse pesado de procesar en el navegador.</li>
-</ul>
-</li>
-</ul>
+<h2 id="como-incluir-las-librerias">📦 Cómo incluir las librerías</h2>
+<p>En este curso usaremos <strong>CDN</strong> (no hace falta <code>npm</code>). Inserta los scripts/estilos en tu HTML antes de tu código:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Papa Parse: parseo CSV robusto --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/papaparse@5.4.1/papaparse.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Tabulator: tabla interactiva --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span>
+  <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span>
+  <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/tabulator-tables@6.2.5/dist/css/tabulator.min.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/tabulator-tables@6.2.5/dist/js/tabulator.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Tu script --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Consejo</p>
+</div>
+<p>Si luego empaquetas con Vite/Webpack, podrás <code>import Papa from "papaparse"</code> y <code>import { Tabulator } from "tabulator-tables"</code>.</p>
 <hr />
-<h2 id="archivos-json-javascript-object-notation">📌 Archivos JSON (JavaScript Object Notation)</h2>
-<ul>
-<li><strong>Cómo son</strong>: texto estructurado con <strong>objetos y arrays</strong> anidados, muy usado en aplicaciones web.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Es el formato “nativo” de JavaScript: fácil de convertir en objetos del lenguaje.</li>
-<li>Permite estructuras complejas (listas dentro de listas, objetos dentro de objetos).</li>
-<li>Ampliamente utilizado en APIs modernas.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No es tan cómodo para abrir en Excel o editores de texto no técnicos.</li>
-<li>Puede ser más difícil de leer a simple vista que un CSV.</li>
-</ul>
-</li>
-</ul>
+<h2 id="flujo-de-trabajo-con-libreria">📌 Flujo de trabajo con librería</h2>
+<ol>
+<li><strong>Incluir</strong> Papa Parse y Tabulator desde CDN.</li>
+<li><strong>Descargar</strong> el CSV con <code>fetch(url).then(res =&gt; res.text())</code>.</li>
+<li><strong>Parsear</strong> el texto con <code>Papa.parse</code> (cabeceras, líneas vacías, etc.).</li>
+<li><strong>Crear</strong> una <strong>tabla interactiva</strong> con Tabulator (columnas, paginación, ordenación).</li>
+<li><strong>Gestionar errores</strong> y mostrar un estado accesible.</li>
+</ol>
 <hr />
-<h2 id="archivos-xml-extensible-markup-language">📌 Archivos XML (eXtensible Markup Language)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto con etiquetas anidadas, muy parecidos al HTML.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Soporta estructuras jerárquicas complejas.</li>
-<li>Estándar muy extendido en la administración pública y organismos internacionales.</li>
-<li>Puede incluir metadatos y atributos junto con el contenido.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Es más verboso y pesado que JSON.</li>
-<li>Requiere usar parsers para convertirlo a estructuras manejables en JavaScript.</li>
-<li>Puede incluir espacios de nombres (namespaces) que complican el acceso a los datos.</li>
-</ul>
-</li>
-</ul>
+<h2 id="codigo-paso-a-paso">🧩 Código paso a paso</h2>
+<h3 id="1-cargar-y-parsear-el-csv-con-papa-parse">1) Cargar y parsear el CSV con Papa Parse</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Ruta del CSV (ajusta a tu estructura)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">URL_CSV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;datasets/csv/hosteleria-a-domicilio.csv&quot;</span><span class="p">;</span>
+
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">URL_CSV</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cache</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no-cache&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`HTTP </span><span class="si">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Parseo robusto</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">parsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Papa</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">texto</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">header</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">         </span><span class="c1">// primera línea = cabeceras</span>
+<span class="w">    </span><span class="nx">skipEmptyLines</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// ignora filas vacías</span>
+<span class="w">    </span><span class="nx">dynamicTyping</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// valores como texto (puedes ajustar a true si lo necesitas)</span>
+<span class="w">    </span><span class="nx">delimiter</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w">         </span><span class="c1">// autodetecta (,, ;, etc.)</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">parsed</span><span class="p">.</span><span class="nx">errors</span><span class="o">?</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">&quot;Avisos Papa Parse:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parsed</span><span class="p">.</span><span class="nx">errors</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">parsed</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"> </span><span class="c1">// array de objetos</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="apis-rest-servicios-de-datos-en-linea">📌 APIs REST (servicios de datos en línea)</h2>
-<ul>
-<li><strong>Cómo son</strong>: interfaces web que permiten consultar los datos directamente desde los servidores de la administración.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Siempre devuelven la información <strong>actualizada en tiempo real</strong>.</li>
-<li>Permiten filtrar, paginar o buscar datos concretos con parámetros en la URL.</li>
-<li>Normalmente devuelven datos en JSON o XML.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Requieren conexión a Internet en el momento de la consulta.</li>
-<li>A veces necesitan cabeceras específicas o autenticación con tokens.</li>
-<li>Si la API cambia su formato, el código de nuestra aplicación debe adaptarse.</li>
-</ul>
-</li>
-</ul>
+<h3 id="2-generar-columnas-automaticamente-para-tabulator">2) Generar columnas automáticamente para Tabulator</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">columnasDesdeDatos</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ejemplo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">ejemplo</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">k</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">k</span><span class="p">,</span><span class="w">   </span><span class="c1">// etiqueta visible</span>
+<span class="w">    </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="nx">k</span><span class="p">,</span><span class="w">   </span><span class="c1">// clave del objeto</span>
+<span class="w">    </span><span class="nx">sorter</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">headerHozAlign</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">hozAlign</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span>
+<span class="w">  </span><span class="p">}));</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="3-pintar-la-tabla-con-tabulator">3) Pintar la tabla con Tabulator</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">renderTabla</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">columns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">columnasDesdeDatos</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Tabulator</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">data</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">columns</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fitDataStretch&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">pagination</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">paginationSize</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">paginationSizeSelector</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;No hay datos que mostrar&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">progressiveRender</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">progressiveRenderSize</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">columnDefaults</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">headerHozAlign</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">hozAlign</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="4-busqueda-global-opcional">4) Búsqueda global (opcional)</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">activarBusquedaGlobal</span><span class="p">(</span><span class="nx">input</span><span class="p">,</span><span class="w"> </span><span class="nx">table</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">input</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">term</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">term</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">table</span><span class="p">.</span><span class="nx">clearFilter</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">table</span><span class="p">.</span><span class="nx">setFilter</span><span class="p">((</span><span class="nx">row</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">row</span><span class="p">.</span><span class="nx">getData</span><span class="p">();</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">some</span><span class="p">(</span><span class="nx">v</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">        </span><span class="nb">String</span><span class="p">(</span><span class="nx">v</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">includes</span><span class="p">(</span><span class="nx">term</span><span class="p">));</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="5-ponerlo-todo-junto">5) Ponerlo todo junto</h3>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tabla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">renderTabla</span><span class="p">(</span><span class="s2">&quot;#tabla&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">datos</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Si tienes un &lt;input id=&quot;q&quot;&gt; en tu HTML</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;q&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">q</span><span class="p">)</span><span class="w"> </span><span class="nx">activarBusquedaGlobal</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span><span class="w"> </span><span class="nx">tabla</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error al cargar/mostrar CSV:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Muestra un mensaje accesible en la página si quieres</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;status&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">status</span><span class="p">)</span><span class="w"> </span><span class="nx">status</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;❌ Error al cargar el CSV. Comprueba la ruta y usa un servidor local.&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">})();</span>
+</code></pre></div>
 <hr />
 <div class="admonition tip">
 <p class="admonition-title">Consejo</p>
-<p>Como desarrolladoras y desarrolladores, es importante elegir <strong>el formato adecuado para cada caso de uso</strong>:</p>
-<ul>
-<li>Si necesitas <strong>listas simples</strong> → CSV.  </li>
-<li>Si quieres <strong>estructuras jerárquicas y directas para JavaScript</strong> → JSON.  </li>
-<li>Si trabajas con <strong>fuentes institucionales antiguas</strong> → XML.  </li>
-<li>Si necesitas <strong>datos actualizados al momento y filtrables</strong> → API REST.  </li>
-</ul>
+<p><strong>Rutas relativas</strong>: si tu HTML está en <code>2-csv/demo/index.html</code> y los datos en <code>datasets/csv/…</code>, la ruta típica será <code>../../datasets/csv/hosteleria-a-domicilio.csv</code>.
+Verifica siempre la ruta final en DevTools → pestaña <strong>Network</strong>.</p>
 </div>
 <hr />
-<h2 id="preguntas-de-reflexion">📝 Preguntas de reflexión</h2>
+<h2 id="comparacion-con-el-enfoque-vanilla">⚖️ Comparación con el enfoque <em>vanilla</em></h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Vanilla (split + parseo propio)</th>
+<th>Con librerías (Papa Parse + Tabulator)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parseo de CSV</td>
+<td>Manual (<code>split</code>, comillas, saltos de línea, separador)</td>
+<td><strong>Automático y robusto</strong> (cabeceras, comillas, autodetección de separador, líneas vacías)</td>
+</tr>
+<tr>
+<td>Tipado de valores</td>
+<td>Manual (hay que convertir números/booleanos si se desea)</td>
+<td><code>dynamicTyping</code> opcional (convierte números/booleanos)</td>
+</tr>
+<tr>
+<td>Errores de formato</td>
+<td>A tu cargo (tienes que manejarlos)</td>
+<td>Reporte de errores/advertencias en <code>parsed.errors</code></td>
+</tr>
+<tr>
+<td>Tabla y UI</td>
+<td>Manual (construcción de <code>&lt;table&gt;</code>, ordenación/filtrado a mano)</td>
+<td><strong>Tabulator</strong> ofrece paginación, ordenación, filtros, responsive</td>
+</tr>
+<tr>
+<td>Código repetitivo</td>
+<td>Más líneas (plantillas de tabla, eventos, filtros)</td>
+<td>Menos repetición: configuración y listo</td>
+</tr>
+<tr>
+<td>Dependencias</td>
+<td>Ninguna</td>
+<td>2 dependencias (ligeras)</td>
+</tr>
+<tr>
+<td>Curva de aprendizaje</td>
+<td>Muy baja</td>
+<td>Muy baja (configurar opciones y columnas)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
 <div class="admonition question">
 <p class="admonition-title">Repaso</p>
 <ol>
-<li>¿Qué diferencias fundamentales hay entre CSV y JSON?</li>
-<li>¿Qué ventajas tiene usar JSON frente a XML en aplicaciones web modernas?</li>
-<li>¿Por qué una API puede ser más útil que descargar un archivo estático?</li>
-<li>¿Qué problemas podrían surgir al trabajar con un CSV de gran tamaño en el navegador?</li>
-<li>Si quisieras mostrar un mapa con ubicaciones de monumentos, ¿qué formato te resultaría más práctico y por qué?</li>
+<li>¿Qué parámetros principales has usado en <code>Papa.parse</code> y para qué sirven?</li>
+<li>¿Cómo generas dinámicamente las columnas de Tabulator a partir de los datos?</li>
+<li>¿Qué ventaja ofrece Tabulator frente a crear una tabla HTML “a mano”?</li>
+<li>¿Cómo implementarías una <strong>búsqueda global</strong> sobre todas las columnas?</li>
+<li>Si el CSV es muy grande, ¿qué opciones de Tabulator ayudan a que sea fluido?</li>
 </ol>
 </div>
 

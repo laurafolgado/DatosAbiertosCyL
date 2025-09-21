@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../2-1-csv-leccion/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../2-3-csv-ejemplo-libreria/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
-        <title>Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
+        <title>2.2 Ej. CSV con Vanilla JS - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,9 +48,9 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap">
     
-      <link rel="stylesheet" href="/jcyl.css">
+      <link rel="stylesheet" href="../../jcyl.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#22-ejemplo-con-javascript-puro-vanilla" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-header__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
+    <a href="../.." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-header__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
       
-  <img src="/assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              2.2 Ej. CSV con Vanilla JS
             
           </span>
         </div>
@@ -208,9 +217,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-nav__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
+    <a href="../.." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-nav__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
       
-  <img src="/assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional
@@ -278,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
         
   
   
@@ -301,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
+      <a href="../../0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
         
   
   
@@ -324,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-3-tipos-datos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-3-tipos-datos/" class="md-nav__link">
         
   
   
@@ -405,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-fetch/1-1-fetch-leccion/" class="md-nav__link">
+      <a href="../../1-fetch/1-1-fetch-leccion/" class="md-nav__link">
         
   
   
@@ -428,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-fetch/1-2-fetch-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../1-fetch/1-2-fetch-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -455,8 +464,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -477,13 +488,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -499,7 +508,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             2. CSV
@@ -513,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-1-csv-leccion/" class="md-nav__link">
+      <a href="../2-1-csv-leccion/" class="md-nav__link">
         
   
   
@@ -533,10 +542,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/2-csv/2-2-csv-ejemplo-vanilla/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    2.2 Ej. CSV con Vanilla JS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -547,6 +578,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con vanilla JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-el-csv-y-convertirlo-en-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar el CSV y convertirlo en texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-convertir-cada-linea-en-un-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Convertir cada línea en un objeto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-renderizar-una-tabla-en-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Renderizar una tabla en HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -559,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-3-csv-ejemplo-libreria/" class="md-nav__link">
+      <a href="../2-3-csv-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -582,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-4-csv-demo/" class="md-nav__link">
+      <a href="../2-4-csv-demo/" class="md-nav__link">
         
   
   
@@ -667,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-1-xml-leccion/" class="md-nav__link">
+      <a href="../../3-xml/3-1-xml-leccion/" class="md-nav__link">
         
   
   
@@ -690,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-2-xml-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../3-xml/3-2-xml-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -713,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-3-xml-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../3-xml/3-3-xml-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -736,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-4-xml-demo/" class="md-nav__link">
+      <a href="../../3-xml/3-4-xml-demo/" class="md-nav__link">
         
   
   
@@ -821,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-1-json-leccion/" class="md-nav__link">
+      <a href="../../4-json/4-1-json-leccion/" class="md-nav__link">
         
   
   
@@ -844,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-2-json-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../4-json/4-2-json-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -867,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-3-json-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../4-json/4-3-json-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -890,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-4-json-demo/" class="md-nav__link">
+      <a href="../../4-json/4-4-json-demo/" class="md-nav__link">
         
   
   
@@ -975,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-1-api-leccion/" class="md-nav__link">
+      <a href="../../5-api/5-1-api-leccion/" class="md-nav__link">
         
   
   
@@ -998,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-2-api-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../5-api/5-2-api-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1021,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-3-api-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../5-api/5-3-api-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1044,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-4-api-demo/" class="md-nav__link">
+      <a href="../../5-api/5-4-api-demo/" class="md-nav__link">
         
   
   
@@ -1129,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-1-tablas-leccion/" class="md-nav__link">
+      <a href="../../6-tablas/6-1-tablas-leccion/" class="md-nav__link">
         
   
   
@@ -1152,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-2-tablas-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../6-tablas/6-2-tablas-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1175,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-3-tablas-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../6-tablas/6-3-tablas-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1198,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-4-tablas-demo/" class="md-nav__link">
+      <a href="../../6-tablas/6-4-tablas-demo/" class="md-nav__link">
         
   
   
@@ -1283,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-1-graficos-leccion/" class="md-nav__link">
+      <a href="../../7-graficos/7-1-graficos-leccion/" class="md-nav__link">
         
   
   
@@ -1306,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1329,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1352,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-4-graficos-demo/" class="md-nav__link">
+      <a href="../../7-graficos/7-4-graficos-demo/" class="md-nav__link">
         
   
   
@@ -1437,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-1-mapas-leccion/" class="md-nav__link">
+      <a href="../../8-mapas/8-1-mapas-leccion/" class="md-nav__link">
         
   
   
@@ -1460,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-2-mapas-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../8-mapas/8-2-mapas-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1483,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-3-mapas-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../8-mapas/8-3-mapas-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1506,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-4-mapas-demo/" class="md-nav__link">
+      <a href="../../8-mapas/8-4-mapas-demo/" class="md-nav__link">
         
   
   
@@ -1546,6 +1657,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con vanilla JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-el-csv-y-convertirlo-en-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar el CSV y convertirlo en texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-convertir-cada-linea-en-un-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Convertir cada línea en un objeto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-renderizar-una-tabla-en-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Renderizar una tabla en HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1557,8 +1738,124 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="22-ejemplo-con-javascript-puro-vanilla">2.2. Ejemplo con JavaScript puro (vanilla)</h1>
+<p>En este apartado vamos a ver cómo procesar un CSV utilizando <strong>solo JavaScript puro</strong>, sin librerías externas.<br />
+Trabajaremos con el dataset de <strong>hostelería a domicilio</strong> de la Junta de Castilla y León.</p>
+<hr />
+<h2 id="flujo-de-trabajo-con-vanilla-js">📌 Flujo de trabajo con vanilla JS</h2>
+<ol>
+<li><strong>Cargar el archivo</strong> con <code>fetch</code>.  </li>
+<li><strong>Obtener el contenido como texto</strong> usando <code>.text()</code>.  </li>
+<li><strong>Separar en líneas</strong>: cada línea será un registro.  </li>
+<li><strong>Detectar la primera línea como cabecera</strong> (nombres de columnas).  </li>
+<li><strong>Mapear las líneas restantes</strong> a objetos JavaScript usando las cabeceras como claves.  </li>
+<li><strong>Mostrar los datos</strong> en la consola o en una tabla HTML sencilla.</li>
+</ol>
+<hr />
+<h2 id="codigo-paso-a-paso">🧩 Código paso a paso</h2>
+<h3 id="1-cargar-el-csv-y-convertirlo-en-texto">1) Cargar el CSV y convertirlo en texto</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">respuesta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;datasets/csv/hosteleria-a-domicilio.csv&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">respuesta</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="sb">````</span>
+
+<span class="nx">Esto</span><span class="w"> </span><span class="nx">nos</span><span class="w"> </span><span class="nx">muestra</span><span class="w"> </span><span class="nx">todo</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="nx">contenido</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">CSV</span><span class="w"> </span><span class="nx">en</span><span class="w"> </span><span class="nx">bruto</span><span class="p">.</span>
+
+<span class="o">---</span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="nx">Separar</span><span class="w"> </span><span class="nx">en</span><span class="w"> </span><span class="nx">líneas</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="nx">extraer</span><span class="w"> </span><span class="nx">las</span><span class="w"> </span><span class="nx">cabeceras</span>
+
+<span class="sb">```js</span>
+<span class="sb">let lineas = texto.trim().split(&quot;\n&quot;);</span>
+<span class="sb">let cabeceras = lineas.shift().split(&quot;,&quot;);</span>
+</code></pre></div>
+<ul>
+<li><code>lineas</code> es un array con todas las filas de datos.</li>
+<li><code>cabeceras</code> es un array con los nombres de las columnas.</li>
+</ul>
+<hr />
+<h3 id="3-convertir-cada-linea-en-un-objeto">3) Convertir cada línea en un objeto</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lineas</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">linea</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">linea</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">fromEntries</span><span class="p">(</span><span class="nx">cabeceras</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">valores</span><span class="p">[</span><span class="nx">i</span><span class="p">]]));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>De esta manera obtenemos un array de objetos como este:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bar La Plaza&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Localidad&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Salamanca&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Telefono&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;923123456&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Café Sol&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Localidad&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Valladolid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Telefono&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;983654321&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<hr />
+<h3 id="4-renderizar-una-tabla-en-html">4) Renderizar una tabla en HTML</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">renderTabla</span><span class="p">(</span><span class="nx">datos</span><span class="p">,</span><span class="w"> </span><span class="nx">columnas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">tabla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// cabecera</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">thead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;thead&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">tr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">columnas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">col</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">th</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;th&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">th</span><span class="p">.</span><span class="nx">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;col&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">th</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">col</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">tr</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">th</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="nx">thead</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tr</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">tabla</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">thead</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// filas</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">tbody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;tbody&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">datos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">fila</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">tr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">columnas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">col</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">td</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">td</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fila</span><span class="p">[</span><span class="nx">col</span><span class="p">];</span>
+<span class="w">      </span><span class="nx">tr</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">td</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">tbody</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tr</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="nx">tabla</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tbody</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">tabla</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Consejo</p>
+<p>Este enfoque es ideal para <strong>entender cómo funciona el CSV por dentro</strong> y para datasets sencillos.
+Sin embargo, con archivos muy grandes o con formatos más complejos (celdas con comillas, saltos de línea dentro de un campo…) puede resultar limitado.</p>
+</div>
+<hr />
+<h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
+<div class="admonition question">
+<p class="admonition-title">Repaso</p>
+<ol>
+<li>¿Qué función cumple <code>fetch</code> en este ejemplo?</li>
+<li>¿Qué guardamos en la variable <code>cabeceras</code>?</li>
+<li>¿Cómo transformamos cada línea de texto en un objeto JavaScript?</li>
+<li>¿Por qué se usa <code>Object.fromEntries</code> en el código?</li>
+<li>¿Qué ventajas tiene mostrar los datos en una tabla HTML en lugar de solo en consola?</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1599,10 +1896,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "header.autohide", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.linked"], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "header.autohide", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.linked"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>

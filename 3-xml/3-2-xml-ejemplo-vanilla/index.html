@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../0-2-gobierno-abierto/">
+        <link rel="prev" href="../3-1-xml-leccion/">
       
       
-        <link rel="next" href="../../1-fetch/1-1-fetch-leccion/">
+        <link rel="next" href="../3-3-xml-ejemplo-libreria/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>0.3 Tipos de datos abiertos y formas de acceso - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
+        <title>3.2 Ej. XML con JS puro - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-tipos-de-datos-abiertos-y-formas-de-acceso" class="md-skip">
+        <a href="#32-ejemplo-con-javascript-puro-vanilla-xml" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              0.3 Tipos de datos abiertos y formas de acceso
+              3.2 Ej. XML con JS puro
             
           </span>
         </div>
@@ -231,10 +231,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -253,11 +251,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -273,7 +273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Introducción
@@ -287,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-1-introduccion-datos-abiertos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
         
   
   
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-2-gobierno-abierto/" class="md-nav__link">
+      <a href="../../0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
         
   
   
@@ -330,32 +330,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    0.3 Tipos de datos abiertos y formas de acceso
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../0-presentacion/0-3-tipos-datos/" class="md-nav__link">
         
   
   
@@ -366,71 +344,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 Preguntas de reflexión
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -705,8 +618,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -727,13 +642,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -749,7 +662,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             3. XML
@@ -763,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3-xml/3-1-xml-leccion/" class="md-nav__link">
+      <a href="../3-1-xml-leccion/" class="md-nav__link">
         
   
   
@@ -783,10 +696,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../3-xml/3-2-xml-ejemplo-vanilla/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3.2 Ej. XML con JS puro
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -797,6 +732,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con vanilla JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-y-parsear-el-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar y parsear el XML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-seleccionar-nodos-de-evento-y-convertirlos-a-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Seleccionar nodos de evento y convertirlos a objetos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-normalizar-campos-fechas-y-coordenadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Normalizar campos (fechas y coordenadas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-renderizar-en-tarjetas-accesibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Renderizar en tarjetas accesibles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ponerlo-todo-junto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Ponerlo todo junto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -809,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3-xml/3-3-xml-ejemplo-libreria/" class="md-nav__link">
+      <a href="../3-3-xml-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -832,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3-xml/3-4-xml-demo/" class="md-nav__link">
+      <a href="../3-4-xml-demo/" class="md-nav__link">
         
   
   
@@ -1652,45 +1685,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
+  <a href="#flujo-de-trabajo-con-vanilla-js" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
+      📌 Flujo de trabajo con vanilla JS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-y-parsear-el-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar y parsear el XML
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-seleccionar-nodos-de-evento-y-convertirlos-a-objetos" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
+      2) Seleccionar nodos de evento y convertirlos a objetos
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-normalizar-campos-fechas-y-coordenadas" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
+      3) Normalizar campos (fechas y coordenadas)
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#4-renderizar-en-tarjetas-accesibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Renderizar en tarjetas accesibles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ponerlo-todo-junto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Ponerlo todo junto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
     <span class="md-ellipsis">
-      📝 Preguntas de reflexión
+      📝 Preguntas de repaso
     </span>
   </a>
   
@@ -1712,98 +1778,136 @@
 
 
 
-<h1 id="03-tipos-de-datos-abiertos-y-formas-de-acceso">0.3. Tipos de datos abiertos y formas de acceso</h1>
-<p>En el portal de <strong>Datos Abiertos de la Junta de Castilla y León</strong> no todos los datos se presentan de la misma manera.
-Según el <strong>formato en el que estén publicados</strong>, necesitaremos estrategias distintas para acceder, interpretar y utilizarlos en nuestras aplicaciones.</p>
-<p>Los formatos más habituales son: <strong>CSV, JSON, XML y APIs REST</strong>. Cada uno tiene sus características, ventajas y retos.</p>
+<h1 id="32-ejemplo-con-javascript-puro-vanilla-xml">3.2. Ejemplo con JavaScript puro (vanilla) – XML</h1>
+<p>En este ejemplo aprenderás a <strong>leer y procesar un XML</strong> usando <strong>solo JavaScript</strong> (sin librerías).<br />
+Trabajaremos con el dataset real <strong><code>eventos.xml</code></strong> (agenda cultural) y mostraremos cómo convertir sus nodos en <strong>objetos JavaScript</strong> para poder listarlos o construir tarjetas.</p>
 <hr />
-<h2 id="archivos-csv-comma-separated-values">📌 Archivos CSV (Comma Separated Values)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto donde cada línea representa un registro y cada columna está separada por comas (<code>,</code>), aunque a veces se usa el punto y coma (<code>;</code>).</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Muy sencillos de entender.</li>
-<li>Compatibles con Excel, Google Sheets y cualquier editor de texto.</li>
-<li>Ideales para información tabular (listados, estadísticas, directorios).</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No incluyen estructura jerárquica: solo filas y columnas.</li>
-<li>A veces es difícil manejar campos con comillas o saltos de línea.</li>
-<li>Si el dataset es grande, puede volverse pesado de procesar en el navegador.</li>
-</ul>
-</li>
-</ul>
+<h2 id="flujo-de-trabajo-con-vanilla-js">📌 Flujo de trabajo con vanilla JS</h2>
+<ol>
+<li><strong>Obtener el archivo</strong> con <code>fetch</code>.  </li>
+<li><strong>Convertir la respuesta a texto</strong> (<code>.text()</code>).  </li>
+<li><strong>Parsear el texto a DOM</strong> con <code>DOMParser</code>.  </li>
+<li><strong>Seleccionar nodos</strong> con <code>querySelectorAll</code>.  </li>
+<li><strong>Mapear cada nodo</strong> a un objeto (extrayendo subelementos y atributos).  </li>
+<li><strong>Normalizar campos</strong> como fechas o coordenadas.  </li>
+<li><strong>Renderizar</strong> en tarjetas accesibles.  </li>
+</ol>
 <hr />
-<h2 id="archivos-json-javascript-object-notation">📌 Archivos JSON (JavaScript Object Notation)</h2>
-<ul>
-<li><strong>Cómo son</strong>: texto estructurado con <strong>objetos y arrays</strong> anidados, muy usado en aplicaciones web.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Es el formato “nativo” de JavaScript: fácil de convertir en objetos del lenguaje.</li>
-<li>Permite estructuras complejas (listas dentro de listas, objetos dentro de objetos).</li>
-<li>Ampliamente utilizado en APIs modernas.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No es tan cómodo para abrir en Excel o editores de texto no técnicos.</li>
-<li>Puede ser más difícil de leer a simple vista que un CSV.</li>
-</ul>
-</li>
-</ul>
+<h2 id="codigo-paso-a-paso">🧩 Código paso a paso</h2>
+<h3 id="1-cargar-y-parsear-el-xml">1) Cargar y parsear el XML</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarXML</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">xmlText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DOMParser</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parser</span><span class="p">.</span><span class="nx">parseFromString</span><span class="p">(</span><span class="nx">xmlText</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;application/xml&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">parseError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;parsererror&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">parseError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">&quot;Error al parsear el XML: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">parseError</span><span class="p">.</span><span class="nx">textContent</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Uso</span>
+<span class="nx">cargarXML</span><span class="p">(</span><span class="s2">&quot;datasets/xml/eventos.xml&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">xmlDoc</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Documento XML:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
 <hr />
-<h2 id="archivos-xml-extensible-markup-language">📌 Archivos XML (eXtensible Markup Language)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto con etiquetas anidadas, muy parecidos al HTML.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Soporta estructuras jerárquicas complejas.</li>
-<li>Estándar muy extendido en la administración pública y organismos internacionales.</li>
-<li>Puede incluir metadatos y atributos junto con el contenido.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Es más verboso y pesado que JSON.</li>
-<li>Requiere usar parsers para convertirlo a estructuras manejables en JavaScript.</li>
-<li>Puede incluir espacios de nombres (namespaces) que complican el acceso a los datos.</li>
-</ul>
-</li>
-</ul>
+<h3 id="2-seleccionar-nodos-de-evento-y-convertirlos-a-objetos">2) Seleccionar nodos de evento y convertirlos a objetos</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">leerEventos</span><span class="p">(</span><span class="nx">xmlDoc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">nodosEvento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;element&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">nodosEvento</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">nodo</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">get</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">sel</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">nodo</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">sel</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">textContent</span><span class="o">?</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;Titulo_es&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">inicio</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;FechaInicio&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">fin</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;FechaFin&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">descripcion</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;Descripcion_es&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">lugar</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;LugarCelebracion&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">municipio</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;Municipio&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">provincia</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;Provincia&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">coords</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;LugarCelebracionDirectorio_Posicion&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">imagen</span><span class="o">:</span><span class="w"> </span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;ImagenEvento&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="apis-rest-servicios-de-datos-en-linea">📌 APIs REST (servicios de datos en línea)</h2>
-<ul>
-<li><strong>Cómo son</strong>: interfaces web que permiten consultar los datos directamente desde los servidores de la administración.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Siempre devuelven la información <strong>actualizada en tiempo real</strong>.</li>
-<li>Permiten filtrar, paginar o buscar datos concretos con parámetros en la URL.</li>
-<li>Normalmente devuelven datos en JSON o XML.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Requieren conexión a Internet en el momento de la consulta.</li>
-<li>A veces necesitan cabeceras específicas o autenticación con tokens.</li>
-<li>Si la API cambia su formato, el código de nuestra aplicación debe adaptarse.</li>
-</ul>
-</li>
-</ul>
+<h3 id="3-normalizar-campos-fechas-y-coordenadas">3) Normalizar campos (fechas y coordenadas)</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">toDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">s</span><span class="o">?</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">d</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">parseCoords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">lat</span><span class="p">,</span><span class="w"> </span><span class="nx">lon</span><span class="p">,</span><span class="w"> </span><span class="nx">alt</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="nx">lat</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="nx">lon</span><span class="p">)</span>
+<span class="w">    </span><span class="o">?</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lat</span><span class="p">,</span><span class="w"> </span><span class="nx">lon</span><span class="p">,</span><span class="w"> </span><span class="nx">alt</span><span class="o">:</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="nx">alt</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">alt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">normalizarEventos</span><span class="p">(</span><span class="nx">eventos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">eventos</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">ev</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<span class="w">    </span><span class="p">...</span><span class="nx">ev</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">inicioDate</span><span class="o">:</span><span class="w"> </span><span class="nx">toDate</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">inicio</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">finDate</span><span class="o">:</span><span class="w"> </span><span class="nx">toDate</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">fin</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">geo</span><span class="o">:</span><span class="w"> </span><span class="nx">parseCoords</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">coords</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}));</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<div class="admonition tip">
-<p class="admonition-title">Consejo</p>
-<p>Como desarrolladoras y desarrolladores, es importante elegir <strong>el formato adecuado para cada caso de uso</strong>:</p>
-<ul>
-<li>Si necesitas <strong>listas simples</strong> → CSV.  </li>
-<li>Si quieres <strong>estructuras jerárquicas y directas para JavaScript</strong> → JSON.  </li>
-<li>Si trabajas con <strong>fuentes institucionales antiguas</strong> → XML.  </li>
-<li>Si necesitas <strong>datos actualizados al momento y filtrables</strong> → API REST.  </li>
-</ul>
-</div>
+<h3 id="4-renderizar-en-tarjetas-accesibles">4) Renderizar en tarjetas accesibles</h3>
+<p>HTML mínimo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lista&quot;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&quot;polite&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>JS:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">renderEventos</span><span class="p">(</span><span class="nx">eventos</span><span class="p">,</span><span class="w"> </span><span class="nx">contenedor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">contenedor</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">fragment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createDocumentFragment</span><span class="p">();</span>
+
+<span class="w">  </span><span class="nx">eventos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">ev</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;article&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">art</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;card&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">art</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">      &lt;h2&gt;</span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">titulo</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;Evento sin título&quot;</span><span class="si">}</span><span class="sb">&lt;/h2&gt;</span>
+<span class="sb">      &lt;p&gt;&lt;strong&gt;Inicio:&lt;/strong&gt; </span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">inicio</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;—&quot;</span><span class="si">}</span><span class="sb"> · &lt;strong&gt;Fin:&lt;/strong&gt; </span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">fin</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;—&quot;</span><span class="si">}</span><span class="sb">&lt;/p&gt;</span>
+<span class="sb">      </span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">lugar</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`&lt;p&gt;&lt;strong&gt;Lugar:&lt;/strong&gt; </span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">lugar</span><span class="si">}</span><span class="sb"> (</span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">municipio</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="si">}${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">provincia</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ev</span><span class="p">.</span><span class="nx">provincia</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="si">}</span><span class="sb">)&lt;/p&gt;`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="si">}</span>
+<span class="sb">      </span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">imagen</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`&lt;img src=&quot;</span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">imagen</span><span class="si">}</span><span class="sb">&quot; alt=&quot;</span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">titulo</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`Imagen del evento “</span><span class="si">${</span><span class="nx">ev</span><span class="p">.</span><span class="nx">titulo</span><span class="si">}</span><span class="sb">”`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Imagen del evento&quot;</span><span class="si">}</span><span class="sb">&quot;&gt;`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="si">}</span>
+<span class="sb">    `</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">fragment</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">art</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="nx">contenedor</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">fragment</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="preguntas-de-reflexion">📝 Preguntas de reflexión</h2>
+<h3 id="5-ponerlo-todo-junto">5) Ponerlo todo junto</h3>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">xmlDoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">cargarXML</span><span class="p">(</span><span class="s2">&quot;datasets/xml/eventos.xml&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">eventos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">leerEventos</span><span class="p">(</span><span class="nx">xmlDoc</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">normalizados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">normalizarEventos</span><span class="p">(</span><span class="nx">eventos</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nx">normalizados</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">inicioDate</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">inicioDate</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">0</span><span class="p">));</span>
+
+<span class="w">  </span><span class="nx">renderEventos</span><span class="p">(</span><span class="nx">normalizados</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">),</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;lista&quot;</span><span class="p">));</span>
+<span class="p">})();</span>
+</code></pre></div>
+<hr />
+<h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
 <div class="admonition question">
 <p class="admonition-title">Repaso</p>
 <ol>
-<li>¿Qué diferencias fundamentales hay entre CSV y JSON?</li>
-<li>¿Qué ventajas tiene usar JSON frente a XML en aplicaciones web modernas?</li>
-<li>¿Por qué una API puede ser más útil que descargar un archivo estático?</li>
-<li>¿Qué problemas podrían surgir al trabajar con un CSV de gran tamaño en el navegador?</li>
-<li>Si quisieras mostrar un mapa con ubicaciones de monumentos, ¿qué formato te resultaría más práctico y por qué?</li>
+<li>¿Qué devuelve <code>DOMParser.parseFromString</code> y por qué es útil?</li>
+<li>¿Cómo seleccionamos todos los nodos de evento en el XML?</li>
+<li>¿Qué ventaja tiene usar <code>?.textContent ?? ""</code> al leer campos del XML?</li>
+<li>¿Cómo transformarías <code>lat#lon#alt</code> en un objeto <code>{ lat, lon, alt }</code>?</li>
+<li>¿Por qué es recomendable normalizar las fechas antes de ordenarlas o filtrarlas?</li>
 </ol>
 </div>
 

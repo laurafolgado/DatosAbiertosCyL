@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../../0-presentacion/0-3-tipos-datos/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../1-2-fetch-ejemplo-vanilla/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
-        <title>Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
+        <title>1.1 Lección - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,9 +48,9 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap">
     
-      <link rel="stylesheet" href="/jcyl.css">
+      <link rel="stylesheet" href="../../jcyl.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#11-fundamentos-de-fetch-promesas-y-asyncawait" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-header__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
+    <a href="../.." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-header__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
       
-  <img src="/assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              1.1 Lección
             
           </span>
         </div>
@@ -208,9 +217,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-nav__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
+    <a href="../.." title="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" class="md-nav__button md-logo" aria-label="Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional" data-md-component="logo">
       
-  <img src="/assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional
@@ -278,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
         
   
   
@@ -301,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
+      <a href="../../0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
         
   
   
@@ -324,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/0-presentacion/0-3-tipos-datos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-3-tipos-datos/" class="md-nav__link">
         
   
   
@@ -351,8 +360,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -369,13 +380,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -391,7 +400,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             1. Fundamentos de Fetch, promesas y async/await
@@ -402,10 +411,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/1-fetch/1-1-fetch-leccion/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1.1 Lección
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -416,6 +447,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 ¿Qué es fetch?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-promesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 ¿Qué es una promesa?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-y-await" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 async y await
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particularidades-al-trabajar-con-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Particularidades al trabajar con fetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-de-usar-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Ventajas de usar fetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-y-retos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Limitaciones y retos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -428,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1-fetch/1-2-fetch-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../1-2-fetch-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -513,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-1-csv-leccion/" class="md-nav__link">
+      <a href="../../2-csv/2-1-csv-leccion/" class="md-nav__link">
         
   
   
@@ -536,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-2-csv-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../2-csv/2-2-csv-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -559,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-3-csv-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../2-csv/2-3-csv-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -582,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2-csv/2-4-csv-demo/" class="md-nav__link">
+      <a href="../../2-csv/2-4-csv-demo/" class="md-nav__link">
         
   
   
@@ -667,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-1-xml-leccion/" class="md-nav__link">
+      <a href="../../3-xml/3-1-xml-leccion/" class="md-nav__link">
         
   
   
@@ -690,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-2-xml-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../3-xml/3-2-xml-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -713,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-3-xml-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../3-xml/3-3-xml-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -736,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3-xml/3-4-xml-demo/" class="md-nav__link">
+      <a href="../../3-xml/3-4-xml-demo/" class="md-nav__link">
         
   
   
@@ -821,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-1-json-leccion/" class="md-nav__link">
+      <a href="../../4-json/4-1-json-leccion/" class="md-nav__link">
         
   
   
@@ -844,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-2-json-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../4-json/4-2-json-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -867,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-3-json-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../4-json/4-3-json-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -890,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4-json/4-4-json-demo/" class="md-nav__link">
+      <a href="../../4-json/4-4-json-demo/" class="md-nav__link">
         
   
   
@@ -975,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-1-api-leccion/" class="md-nav__link">
+      <a href="../../5-api/5-1-api-leccion/" class="md-nav__link">
         
   
   
@@ -998,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-2-api-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../5-api/5-2-api-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1021,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-3-api-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../5-api/5-3-api-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1044,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5-api/5-4-api-demo/" class="md-nav__link">
+      <a href="../../5-api/5-4-api-demo/" class="md-nav__link">
         
   
   
@@ -1129,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-1-tablas-leccion/" class="md-nav__link">
+      <a href="../../6-tablas/6-1-tablas-leccion/" class="md-nav__link">
         
   
   
@@ -1152,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-2-tablas-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../6-tablas/6-2-tablas-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1175,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-3-tablas-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../6-tablas/6-3-tablas-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1198,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6-tablas/6-4-tablas-demo/" class="md-nav__link">
+      <a href="../../6-tablas/6-4-tablas-demo/" class="md-nav__link">
         
   
   
@@ -1283,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-1-graficos-leccion/" class="md-nav__link">
+      <a href="../../7-graficos/7-1-graficos-leccion/" class="md-nav__link">
         
   
   
@@ -1306,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1329,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1352,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7-graficos/7-4-graficos-demo/" class="md-nav__link">
+      <a href="../../7-graficos/7-4-graficos-demo/" class="md-nav__link">
         
   
   
@@ -1437,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-1-mapas-leccion/" class="md-nav__link">
+      <a href="../../8-mapas/8-1-mapas-leccion/" class="md-nav__link">
         
   
   
@@ -1460,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-2-mapas-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../../8-mapas/8-2-mapas-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1483,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-3-mapas-ejemplo-libreria/" class="md-nav__link">
+      <a href="../../8-mapas/8-3-mapas-ejemplo-libreria/" class="md-nav__link">
         
   
   
@@ -1506,7 +1620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/8-mapas/8-4-mapas-demo/" class="md-nav__link">
+      <a href="../../8-mapas/8-4-mapas-demo/" class="md-nav__link">
         
   
   
@@ -1546,6 +1660,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 ¿Qué es fetch?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-promesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 ¿Qué es una promesa?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-y-await" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 async y await
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particularidades-al-trabajar-con-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Particularidades al trabajar con fetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-de-usar-fetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Ventajas de usar fetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-y-retos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Limitaciones y retos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1557,8 +1744,120 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="11-fundamentos-de-fetch-promesas-y-asyncawait">1.1. Fundamentos de <code>fetch</code>, promesas y <code>async/await</code></h1>
+<p>Antes de poder trabajar con datos abiertos (CSV, JSON, XML o APIs), necesitamos saber <strong>cómo traer esos datos a la web</strong> usando JavaScript.
+El navegador nos proporciona la función <strong><code>fetch</code></strong>, que permite realizar solicitudes HTTP de forma sencilla y moderna.</p>
+<p>En esta lección vamos a detenernos en <strong>qué es <code>fetch</code></strong>, qué papel juegan las <strong>promesas</strong>, qué ventajas ofrece <code>async/await</code> y qué limitaciones debemos tener en cuenta al trabajar con este enfoque.</p>
+<hr />
+<h2 id="que-es-fetch">📌 ¿Qué es <code>fetch</code>?</h2>
+<p><code>fetch(url)</code> es una función nativa de JavaScript que nos permite <strong>pedir recursos a un servidor</strong>.
+Devuelve una <strong>promesa</strong> que se resuelve en un objeto <code>Response</code>, con métodos para acceder al contenido.</p>
+<p>Ejemplo básico:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;datasets/csv/hosteleria-a-domicilio.csv&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">texto</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">))</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">));</span>
+</code></pre></div>
+<p>En este caso:</p>
+<ul>
+<li><code>res.text()</code> obtiene el archivo como texto.</li>
+<li>Usamos <code>.then()</code> para manejar el resultado cuando llega.</li>
+<li>Si algo falla (por ejemplo, la ruta es incorrecta), el <code>.catch()</code> captura el error.</li>
+</ul>
+<hr />
+<h2 id="que-es-una-promesa">📌 ¿Qué es una promesa?</h2>
+<p>Una <strong>promesa</strong> es un objeto que representa un <strong>valor que aún no conocemos</strong> pero que estará disponible en el futuro.</p>
+<p>Estados de una promesa:</p>
+<ol>
+<li><code>pending</code> → pendiente.</li>
+<li><code>fulfilled</code> → resuelta con éxito.</li>
+<li><code>rejected</code> → rechazada por error.</li>
+</ol>
+<p>Las promesas nos permiten <strong>no bloquear la página</strong> mientras esperamos datos del servidor.</p>
+<hr />
+<h2 id="async-y-await">📌 <code>async</code> y <code>await</code></h2>
+<p>En lugar de encadenar muchos <code>.then()</code>, podemos escribir código más claro con <code>async/await</code>.</p>
+<p>Ejemplo equivalente al anterior:</p>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;datasets/csv/hosteleria-a-domicilio.csv&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`HTTP </span><span class="si">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ventajas de este enfoque:</p>
+<ul>
+<li>El código se lee “de arriba a abajo”, como si fuera síncrono.</li>
+<li>Más fácil de mantener en programas largos.</li>
+<li>El <code>try/catch</code> captura los errores de forma ordenada.</li>
+</ul>
+<hr />
+<h2 id="particularidades-al-trabajar-con-fetch">📌 Particularidades al trabajar con <code>fetch</code></h2>
+<ul>
+<li><strong>Protocolos seguros</strong>: algunos navegadores bloquean peticiones desde <code>http://</code> si la página está en <code>https://</code>.</li>
+<li><strong>CORS</strong>: el servidor debe permitir que otros sitios consuman sus datos (algo que el portal de Datos Abiertos de JCyL ya hace).</li>
+<li><strong>Rutas relativas</strong>: asegúrate de que apuntas a la carpeta correcta dentro del proyecto.</li>
+<li><strong>Servidor local</strong>: abrir archivos con <code>file://</code> no funciona; necesitas un servidor local (<code>mkdocs serve</code>, Live Server, etc.).</li>
+</ul>
+<hr />
+<h2 id="ventajas-de-usar-fetch">📌 Ventajas de usar <code>fetch</code></h2>
+<ul>
+<li><strong>API nativa</strong>: no requiere instalar librerías.</li>
+<li><strong>Sencillez</strong>: se adapta a la mayoría de casos de uso.</li>
+<li><strong>Flexible</strong>: permite trabajar con texto, JSON, blobs, etc.</li>
+<li><strong>Compatible</strong>: funciona en todos los navegadores modernos.</li>
+</ul>
+<hr />
+<h2 id="limitaciones-y-retos">📌 Limitaciones y retos</h2>
+<ul>
+<li><strong>No aborta por defecto</strong>: necesitamos <code>AbortController</code> si queremos cancelar una petición.</li>
+<li><strong>Sin soporte directo para timeout</strong>: hay que implementarlo manualmente.</li>
+<li><strong>Gestión de errores limitada</strong>: solo da error de red; para códigos como 404 o 500 debemos comprobar <code>res.ok</code>.</li>
+<li><strong>Complejidad con peticiones encadenadas</strong>: sin <code>async/await</code>, los <code>.then()</code> pueden volverse difíciles de leer.</li>
+</ul>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Consejo</p>
+<p>Cuando trabajes con datos abiertos:</p>
+<ul>
+<li>Usa siempre <code>try/catch</code> o <code>.catch()</code> para manejar errores.</li>
+<li>Comprueba <code>res.ok</code> para detectar respuestas HTTP incorrectas.</li>
+<li>Si los datos son muy pesados, considera paginarlos o mostrarlos poco a poco.</li>
+</ul>
+</div>
+<hr />
+<h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
+<div class="admonition question">
+<p class="admonition-title">Repaso</p>
+<ol>
+<li>¿Qué devuelve <code>fetch</code> cuando lo llamamos con una URL?</li>
+<li>¿Qué diferencia hay entre usar <code>.then()</code> y <code>async/await</code>?</li>
+<li>¿Cuáles son los tres estados posibles de una promesa?</li>
+<li>¿Por qué no funciona abrir un HTML con <code>file://</code> al usar <code>fetch</code>?</li>
+<li>¿Qué comprobación deberías hacer siempre con <code>res.ok</code> tras una petición?</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1599,10 +1898,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "header.autohide", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.linked"], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "header.autohide", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.linked"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>

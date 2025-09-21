@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../0-2-gobierno-abierto/">
+        <link rel="prev" href="../7-2-graficos-ejemplo-vanilla/">
       
       
-        <link rel="next" href="../../1-fetch/1-1-fetch-leccion/">
+        <link rel="next" href="../7-4-graficos-demo/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>0.3 Tipos de datos abiertos y formas de acceso - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
+        <title>7.3 Ej. Librería Chart.js - Uso de Datos Abiertos de la Junta de Castilla y León en Formación Profesional</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-tipos-de-datos-abiertos-y-formas-de-acceso" class="md-skip">
+        <a href="#73-ejemplo-con-libreria-chartjs" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              0.3 Tipos de datos abiertos y formas de acceso
+              7.3 Ej. Librería Chart.js
             
           </span>
         </div>
@@ -231,10 +231,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -253,11 +251,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -273,7 +273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Introducción
@@ -287,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-1-introduccion-datos-abiertos/" class="md-nav__link">
+      <a href="../../0-presentacion/0-1-introduccion-datos-abiertos/" class="md-nav__link">
         
   
   
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0-2-gobierno-abierto/" class="md-nav__link">
+      <a href="../../0-presentacion/0-2-gobierno-abierto/" class="md-nav__link">
         
   
   
@@ -330,32 +330,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    0.3 Tipos de datos abiertos y formas de acceso
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../0-presentacion/0-3-tipos-datos/" class="md-nav__link">
         
   
   
@@ -366,71 +344,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 Preguntas de reflexión
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1321,8 +1234,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1343,13 +1258,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -1365,7 +1278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             7. Gráficos
@@ -1379,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7-graficos/7-1-graficos-leccion/" class="md-nav__link">
+      <a href="../7-1-graficos-leccion/" class="md-nav__link">
         
   
   
@@ -1402,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7-graficos/7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
+      <a href="../7-2-graficos-ejemplo-vanilla/" class="md-nav__link">
         
   
   
@@ -1422,10 +1335,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../7-graficos/7-3-graficos-ejemplo-libreria/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    7.3 Ej. Librería Chart.js
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1436,6 +1371,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-incluir-la-libreria" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Cómo incluir la librería
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-con-chartjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Flujo de trabajo con Chart.js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-y-parsear-el-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar y parsear el CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-filtrar-datos-por-ano" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Filtrar datos por año
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-preparar-arrays-para-chartjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Preparar arrays para Chart.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-crear-el-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Crear el gráfico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-con-el-enfoque-vanilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚖️ Comparación con el enfoque vanilla
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de repaso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1448,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7-graficos/7-4-graficos-demo/" class="md-nav__link">
+      <a href="../7-4-graficos-demo/" class="md-nav__link">
         
   
   
@@ -1652,45 +1694,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#archivos-csv-comma-separated-values" class="md-nav__link">
+  <a href="#como-incluir-la-libreria" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos CSV (Comma Separated Values)
+      📦 Cómo incluir la librería
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos-json-javascript-object-notation" class="md-nav__link">
+  <a href="#flujo-de-trabajo-con-chartjs" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos JSON (JavaScript Object Notation)
+      📌 Flujo de trabajo con Chart.js
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos-xml-extensible-markup-language" class="md-nav__link">
+  <a href="#codigo-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Archivos XML (eXtensible Markup Language)
+      🧩 Código paso a paso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Código paso a paso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar-y-parsear-el-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Cargar y parsear el CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-filtrar-datos-por-ano" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Filtrar datos por año
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-preparar-arrays-para-chartjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Preparar arrays para Chart.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-crear-el-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Crear el gráfico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-con-el-enfoque-vanilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚖️ Comparación con el enfoque vanilla
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apis-rest-servicios-de-datos-en-linea" class="md-nav__link">
+  <a href="#preguntas-de-repaso" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 APIs REST (servicios de datos en línea)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preguntas-de-reflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      📝 Preguntas de reflexión
+      📝 Preguntas de repaso
     </span>
   </a>
   
@@ -1712,98 +1796,160 @@
 
 
 
-<h1 id="03-tipos-de-datos-abiertos-y-formas-de-acceso">0.3. Tipos de datos abiertos y formas de acceso</h1>
-<p>En el portal de <strong>Datos Abiertos de la Junta de Castilla y León</strong> no todos los datos se presentan de la misma manera.
-Según el <strong>formato en el que estén publicados</strong>, necesitaremos estrategias distintas para acceder, interpretar y utilizarlos en nuestras aplicaciones.</p>
-<p>Los formatos más habituales son: <strong>CSV, JSON, XML y APIs REST</strong>. Cada uno tiene sus características, ventajas y retos.</p>
+<h1 id="73-ejemplo-con-libreria-chartjs">7.3. Ejemplo con librería – Chart.js</h1>
+<p>En este ejemplo vamos a crear un gráfico de <strong>barras</strong> con la librería <strong>Chart.js</strong> a partir del dataset de <strong>estadísticas de uso de redes sociales</strong>.
+Con Chart.js podemos generar gráficos de manera sencilla, con estilos atractivos y funcionalidades adicionales como <strong>leyendas, tooltips y escalas automáticas</strong>.</p>
 <hr />
-<h2 id="archivos-csv-comma-separated-values">📌 Archivos CSV (Comma Separated Values)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto donde cada línea representa un registro y cada columna está separada por comas (<code>,</code>), aunque a veces se usa el punto y coma (<code>;</code>).</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Muy sencillos de entender.</li>
-<li>Compatibles con Excel, Google Sheets y cualquier editor de texto.</li>
-<li>Ideales para información tabular (listados, estadísticas, directorios).</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No incluyen estructura jerárquica: solo filas y columnas.</li>
-<li>A veces es difícil manejar campos con comillas o saltos de línea.</li>
-<li>Si el dataset es grande, puede volverse pesado de procesar en el navegador.</li>
-</ul>
-</li>
-</ul>
+<h2 id="como-incluir-la-libreria">📦 Cómo incluir la librería</h2>
+<p>Incluimos Chart.js directamente desde un <strong>CDN</strong> en el HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Y añadimos un <code>&lt;canvas&gt;</code> para el gráfico:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;graficoRedes&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</code></pre></div>
 <hr />
-<h2 id="archivos-json-javascript-object-notation">📌 Archivos JSON (JavaScript Object Notation)</h2>
-<ul>
-<li><strong>Cómo son</strong>: texto estructurado con <strong>objetos y arrays</strong> anidados, muy usado en aplicaciones web.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Es el formato “nativo” de JavaScript: fácil de convertir en objetos del lenguaje.</li>
-<li>Permite estructuras complejas (listas dentro de listas, objetos dentro de objetos).</li>
-<li>Ampliamente utilizado en APIs modernas.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>No es tan cómodo para abrir en Excel o editores de texto no técnicos.</li>
-<li>Puede ser más difícil de leer a simple vista que un CSV.</li>
-</ul>
-</li>
-</ul>
+<h2 id="flujo-de-trabajo-con-chartjs">📌 Flujo de trabajo con Chart.js</h2>
+<ol>
+<li><strong>Incluir Chart.js</strong> desde CDN.</li>
+<li><strong>Cargar el dataset CSV</strong> con <code>fetch</code>.</li>
+<li><strong>Parsear el contenido a objetos</strong>.</li>
+<li><strong>Filtrar por año</strong> (ej. 2020).</li>
+<li><strong>Preparar arrays de etiquetas y valores</strong>.</li>
+<li><strong>Configurar el gráfico</strong> con <code>new Chart()</code>.</li>
+<li><strong>Mostrar el gráfico</strong> en el canvas.</li>
+</ol>
 <hr />
-<h2 id="archivos-xml-extensible-markup-language">📌 Archivos XML (eXtensible Markup Language)</h2>
-<ul>
-<li><strong>Cómo son</strong>: archivos de texto con etiquetas anidadas, muy parecidos al HTML.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Soporta estructuras jerárquicas complejas.</li>
-<li>Estándar muy extendido en la administración pública y organismos internacionales.</li>
-<li>Puede incluir metadatos y atributos junto con el contenido.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Es más verboso y pesado que JSON.</li>
-<li>Requiere usar parsers para convertirlo a estructuras manejables en JavaScript.</li>
-<li>Puede incluir espacios de nombres (namespaces) que complican el acceso a los datos.</li>
-</ul>
-</li>
-</ul>
+<h2 id="codigo-paso-a-paso">🧩 Código paso a paso</h2>
+<h3 id="1-cargar-y-parsear-el-csv">1) Cargar y parsear el CSV</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;datasets/csv/estadisticas-de-uso-de-redes-sociales.csv&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">lineas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">cabeceras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lineas</span><span class="p">.</span><span class="nx">shift</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">lineas</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">linea</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">linea</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">fromEntries</span><span class="p">(</span><span class="nx">cabeceras</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">c</span><span class="p">,</span><span class="w"> </span><span class="nx">valores</span><span class="p">[</span><span class="nx">i</span><span class="p">]]));</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="apis-rest-servicios-de-datos-en-linea">📌 APIs REST (servicios de datos en línea)</h2>
-<ul>
-<li><strong>Cómo son</strong>: interfaces web que permiten consultar los datos directamente desde los servidores de la administración.</li>
-<li><strong>Ventajas</strong>:<ul>
-<li>Siempre devuelven la información <strong>actualizada en tiempo real</strong>.</li>
-<li>Permiten filtrar, paginar o buscar datos concretos con parámetros en la URL.</li>
-<li>Normalmente devuelven datos en JSON o XML.</li>
-</ul>
-</li>
-<li><strong>Retos</strong>:<ul>
-<li>Requieren conexión a Internet en el momento de la consulta.</li>
-<li>A veces necesitan cabeceras específicas o autenticación con tokens.</li>
-<li>Si la API cambia su formato, el código de nuestra aplicación debe adaptarse.</li>
-</ul>
-</li>
-</ul>
+<h3 id="2-filtrar-datos-por-ano">2) Filtrar datos por año</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">filtrarPorAno</span><span class="p">(</span><span class="nx">datos</span><span class="p">,</span><span class="w"> </span><span class="nx">ano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2020&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">Año</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">ano</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="3-preparar-arrays-para-chartjs">3) Preparar arrays para Chart.js</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">prepararDatos</span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">etiquetas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">Red</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">Porcentaje</span><span class="p">));</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">etiquetas</span><span class="p">,</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="4-crear-el-grafico">4) Crear el gráfico</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">crearGrafico</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">cargarCSV</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">datos2020</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filtrarPorAno</span><span class="p">(</span><span class="nx">datos</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2020&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">etiquetas</span><span class="p">,</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prepararDatos</span><span class="p">(</span><span class="nx">datos2020</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;graficoRedes&quot;</span><span class="p">).</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="nx">etiquetas</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">datasets</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Porcentaje de uso (%)&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">valores</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#ba273b&quot;</span>
+<span class="w">      </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">legend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">tooltip</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">enabled</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">scales</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">beginAtZero</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Porcentaje&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Red social&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">crearGrafico</span><span class="p">();</span>
+</code></pre></div>
 <hr />
 <div class="admonition tip">
 <p class="admonition-title">Consejo</p>
-<p>Como desarrolladoras y desarrolladores, es importante elegir <strong>el formato adecuado para cada caso de uso</strong>:</p>
+<p>Chart.js soporta muchos tipos de gráficos:</p>
 <ul>
-<li>Si necesitas <strong>listas simples</strong> → CSV.  </li>
-<li>Si quieres <strong>estructuras jerárquicas y directas para JavaScript</strong> → JSON.  </li>
-<li>Si trabajas con <strong>fuentes institucionales antiguas</strong> → XML.  </li>
-<li>Si necesitas <strong>datos actualizados al momento y filtrables</strong> → API REST.  </li>
+<li><code>bar</code> (barras)</li>
+<li><code>line</code> (líneas)</li>
+<li><code>pie</code> (tarta)</li>
+<li><code>doughnut</code> (anillo)</li>
+<li><code>radar</code>, <code>polarArea</code>, etc.</li>
 </ul>
+<p>Puedes cambiar <code>type: "bar"</code> por otro para experimentar.  </p>
 </div>
 <hr />
-<h2 id="preguntas-de-reflexion">📝 Preguntas de reflexión</h2>
+<h2 id="comparacion-con-el-enfoque-vanilla">⚖️ Comparación con el enfoque <em>vanilla</em></h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Canvas (vanilla)</th>
+<th>Chart.js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dibujo básico</td>
+<td>A mano con <code>fillRect</code>, <code>fillText</code></td>
+<td>Automático con <code>datasets</code> y <code>labels</code></td>
+</tr>
+<tr>
+<td>Escalas</td>
+<td>Manual (cálculo de proporciones)</td>
+<td>Automáticas y configurables</td>
+</tr>
+<tr>
+<td>Estilos</td>
+<td>Manual (colores, fuentes)</td>
+<td>Declarativos (<code>backgroundColor</code>, <code>border…</code>)</td>
+</tr>
+<tr>
+<td>Interactividad</td>
+<td>Hay que programarla</td>
+<td>Incluida (tooltips, leyenda, hover)</td>
+</tr>
+<tr>
+<td>Tipos de gráfico</td>
+<td>Solo lo que programes</td>
+<td>Múltiples tipos listos para usar</td>
+</tr>
+<tr>
+<td>Curva de uso</td>
+<td>Baja pero requiere más trabajo</td>
+<td>Muy baja: gráfico listo en pocas líneas</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
 <div class="admonition question">
 <p class="admonition-title">Repaso</p>
 <ol>
-<li>¿Qué diferencias fundamentales hay entre CSV y JSON?</li>
-<li>¿Qué ventajas tiene usar JSON frente a XML en aplicaciones web modernas?</li>
-<li>¿Por qué una API puede ser más útil que descargar un archivo estático?</li>
-<li>¿Qué problemas podrían surgir al trabajar con un CSV de gran tamaño en el navegador?</li>
-<li>Si quisieras mostrar un mapa con ubicaciones de monumentos, ¿qué formato te resultaría más práctico y por qué?</li>
+<li>¿Qué diferencia principal hay entre el gráfico en canvas (vanilla) y el de Chart.js?</li>
+<li>¿Qué arrays preparamos para pasarlos al gráfico en Chart.js?</li>
+<li>¿Qué propiedad permite indicar el tipo de gráfico (<code>bar</code>, <code>line</code>, <code>pie</code>…)?</li>
+<li>¿Cómo activarías una etiqueta en el eje X que muestre “Red social”?</li>
+<li>¿Qué otro tipo de gráfico probarías con este dataset y por qué?</li>
 </ol>
 </div>
 
