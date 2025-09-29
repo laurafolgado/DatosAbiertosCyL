@@ -1686,13 +1686,7 @@
 
 <h1 id="iaura-el-buscador-inteligente-de-datos-abiertos-jcyl">🔎 IAura: el buscador inteligente de Datos Abiertos (JCyL)</h1>
 <p>Soy IAura, tu asistente virtual que te ayuda a resolver tus dudas sobre los datos abiertos de la Junta de Castilla y León y cómo consumir los diferentes tipos de datos con JavaScript y librerías
-Encuentra respuestas rápidas sobre <strong>los apuntes del curso</strong>, el <strong>catálogo de conjuntos</strong> y el <strong>portal de Datos Abiertos de la Junta de Castilla y León</strong>.
-En mis búsquedas priorizo:</p>
-<ol>
-<li>La información recogida en este recurso.</li>
-<li>El <strong>catálogo/datasets</strong> de Datos Abiertos de la Junta de Castilla y León.</li>
-<li>La <strong>documentación pública del portal</strong> de Datos Abiertos de la Junta de Castilla y León.</li>
-</ol>
+Encuentra respuestas rápidas sobre <strong>los apuntes del curso</strong>, el <strong>catálogo de conjuntos</strong> y el <strong>portal de Datos Abiertos de la Junta de Castilla y León</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Qué puedo hacer</p>
 <ul>
@@ -1709,7 +1703,7 @@ En mis búsquedas priorizo:</p>
 <p class="admonition-title">Ejemplos de consultas</p>
 <ul>
 <li>Recomiéndame un dataset en CSV del portal JCyL para hacer una tabla filtrable.</li>
-<li>¿Cómo leo un XML de la agenda cultural con JavaScript?</li>
+<li>¿Cómo leo un XML con JavaScript?</li>
 <li>Dame una demo sencilla para consumir un JSON de Datos Abiertos.</li>
 <li>¿Qué pasos sigo para llamar a una API con fetch y manejar errores?</li>
 </ul>
@@ -1729,7 +1723,7 @@ En mis búsquedas priorizo:</p>
 <!-- Spinner accesible -->
 <p><span id="spinner" class="spinner" hidden role="status" aria-live="polite" aria-label="Cargando">
   <span class="spinner__dot" aria-hidden="true"></span>
-  Pensando…
+  Pensando… (¡necesito mi tiempo!)
 </span></p>
 <p><label for="prompt" style="font-weight:600; display:block; margin:.5rem 0;">Respuesta:</label></p>
 <div id="respuesta"
@@ -1737,25 +1731,9 @@ En mis búsquedas priorizo:</p>
 </div>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 <script>
-/*async function enviar() {
-  const prompt = document.getElementById("prompt").value;
-
-  const res = await fetch("/.netlify/functions/chat", { //EN PRODUCCION
-//const res = await fetch("https://datosabiertoscyl.netlify.app/.netlify/functions/chat", { //EN DESARROLLO
-  method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt })
-  });
-
-  if (!res.ok) {
-    document.getElementById("respuesta").innerHTML = "Error: " + res.status;
-    return;
-  }
-
-  const data = await res.json();
-  document.getElementById("respuesta").innerHTML = data.text;
-}*/
 
   const btn = document.getElementById("btnEnviar");
   const spinner = document.getElementById("spinner");
@@ -1788,9 +1766,17 @@ En mis búsquedas priorizo:</p>
         return;
       }
 
-      const data = await res.json();
-      // Renderiza con formato (permite bloques ```)
-      out.innerHTML = marked.parse(data.text || "(Sin respuesta)";
+    const data = await res.json();
+
+    // Elimina cualquier bloque dentro de corchetes normales o "fullwidth"
+    let cleanText = (data.text || "")
+      .replace(/\[[^\]]*\]/g, "")   // elimina [... cualquier cosa ...]
+      .replace(/【[^】]*】/g, "");   // elimina 【... cualquier cosa ...】
+
+    cleanText = cleanText.replace(/\s{2,}/g, " ").trim();
+
+    out.innerHTML = marked.parse(cleanText || "(Sin respuesta)");
+
     } catch (err) {
       out.textContent = "Se produjo un error de red o CORS. " + err;
     } finally {
@@ -1834,7 +1820,6 @@ En mis búsquedas priorizo:</p>
 <script>
   hljs.highlightAll();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 
 
