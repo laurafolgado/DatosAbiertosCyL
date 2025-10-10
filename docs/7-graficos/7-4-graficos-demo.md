@@ -24,23 +24,21 @@ En esta demo mostramos el dataset de **estadísticas de uso de redes sociales** 
 
 ## 📌 Acceso a las demos
 
-### ▶️ Demo con librería (Chart.js)
-
-[**Abrir demo en vivo**](){ target=\_blank }
+### ▶️ Demo con JavaScript puro (Vanilla)
+<a href="../demo/7-graficos-js/index.html" target="_blank">Abrir demo en vivo (Vanilla Javascript)</a>
 
 También puedes verla incrustada aquí:
 
-<iframe src="./demo/chartjs.html" width="100%" height="400" loading="lazy"></iframe>
+<iframe src="../demo/7-graficos-js/index.html" width="100%" height="640" loading="lazy"></iframe>
 
 ---
 
-### ▶️ Demo con JavaScript puro (vanilla)
-
-[**Abrir demo en vivo (vanilla)**](){ target=\_blank }
+### ▶️ Demo con librería (`Tabulatorre`)
+<a href="../demo/7-graficos-librerias/index.html" target="_blank">Abrir demo en vivo (Tabulator)</a>
 
 También puedes verla incrustada aquí:
 
-<iframe src="" width="100%" height="400" loading="lazy"></iframe>
+<iframe src="../demo/7-graficos-librerias/index.html" width="100%" height="640" loading="lazy"></iframe>
 
 ---
 
