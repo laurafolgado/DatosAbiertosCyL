@@ -18,19 +18,23 @@ El sistema carga el archivo CSV, lo parsea automáticamente y lo muestra en una 
 
 ---
 
-!!! tip "Consejo"
-    Recuerda abrir el proyecto con un **servidor local** (por ejemplo, la extensión *Live Server* en VS Code).  
-    Si intentas abrirlo directamente con `file://`, el navegador puede bloquear la carga del CSV por motivos de seguridad.
+## 📌 Acceso a las demos
 
----
-
-## 📌 Acceso a la demo
-
-[▶️ Abrir demo en vivo](demo/index.html){ target=_blank }
+### ▶️ Demo con JavaScript puro (vanilla)
+<a href="../demo/2-csv-js/index.html" target="_blank">Abrir demo en vivo (Vanilla Javascript)</a>
 
 También puedes verla incrustada aquí:
 
-<iframe src="./demo/index.html" width="100%" height="640" loading="lazy"></iframe>
+<iframe src="../demo/2-csv-js/index.html" width="100%" height="640" loading="lazy"></iframe>
+
+---
+
+### ▶️ Demo con librería (`Axios`)
+<a href="../demo/2-csv-librerias/index.html" target="_blank">Abrir demo en vivo (Axios)</a>
+
+También puedes verla incrustada aquí:
+
+<iframe src="../demo/2-csv-librerias/index.html" width="100%" height="640" loading="lazy"></iframe>
 
 ---
 

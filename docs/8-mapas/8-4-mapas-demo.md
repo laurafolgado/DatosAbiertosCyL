@@ -30,23 +30,21 @@ El sistema carga las coordenadas de los centros y los sitúa en un **mapa intera
 
 ## 📌 Acceso a las demos
 
-### ▶️ Demo con librería (Leaflet)
-
-[**Abrir demo en vivo**](){ target=\_blank }
+### ▶️ Demo con JavaScript puro (Vanilla)
+<a href="../demo/8-mapas-js/index.html" target="_blank">Abrir demo en vivo (Vanilla Javascript)</a>
 
 También puedes verla incrustada aquí:
 
-<iframe src="" width="100%" height="500" loading="lazy"></iframe>
+<iframe src="../demo/8-mapas-js/index.html" width="100%" height="640" loading="lazy"></iframe>
 
 ---
 
-### ▶️ Demo con JavaScript puro (vanilla)
-
-[**Abrir demo en vivo (vanilla)**](){ target=\_blank }
+### ▶️ Demo con librería (`Leaflet`)
+<a href="../demo/8-mapas-librerias/index.html" target="_blank">Abrir demo en vivo (Leaflet)</a>
 
 También puedes verla incrustada aquí:
 
-<iframe src="" width="100%" height="400" loading="lazy"></iframe>
+<iframe src="../demo/8-mapas-librerias/index.html" width="100%" height="640" loading="lazy"></iframe>
 
 ---
 
