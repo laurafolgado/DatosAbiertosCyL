@@ -69,10 +69,11 @@ Año,Red,Porcentaje
 ---
 
 !!! tip "Consejo"
-Antes de mostrar un dataset en una tabla:
-\* Elige solo las **columnas más relevantes** (evita la sobrecarga de información).
-\* Ordena por una columna clave (ej. año o red social).
-\* Asegúrate de que el diseño sea **accesible en móviles** y legible en dispositivos pequeños.
+      Antes de mostrar un dataset en una tabla:
+      
+      * Elige solo las **columnas más relevantes** (evita la sobrecarga de información).
+      * Ordena por una columna clave (ej. año o red social).
+      * Asegúrate de que el diseño sea **accesible en móviles** y legible en dispositivos pequeños.
 
 ---
 

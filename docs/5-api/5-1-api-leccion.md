@@ -15,11 +15,9 @@ En lugar de descargar un archivo fijo (CSV, XML, JSON), hacemos una **solicitud 
 
 Ejemplo genérico de consulta:
 
-```
-
-[https://servidor.datosabiertos.jcyl.es/servicio/recurso?param1=valor1\&param2=valor2](https://servidor.datosabiertos.jcyl.es/servicio/recurso?param1=valor1&param2=valor2)
-
-````
+``
+https://servidor.datosabiertos.jcyl.es/servicio/recurso?param1=valor1\&param2=valor2
+``
 
 ---
 
@@ -39,7 +37,7 @@ Ejemplo genérico de consulta:
 Una petición correcta suele devolver un objeto en JSON con una lista de elementos.  
 Ejemplo simplificado:
 
-```json
+```
 {
   "correcto": true,
   "mensaje": "Lista de actividades enviada correctamente",
@@ -55,7 +53,7 @@ Ejemplo simplificado:
     }
   ]
 }
-````
+```
 
 ---
 
@@ -78,11 +76,12 @@ Ejemplo simplificado:
 ---
 
 !!! tip "Consejo"
-Antes de consumir una API, revisa siempre:
-\- La **documentación oficial** del recurso.
-\- Los **parámetros disponibles** para filtrar datos.
-\- El **formato de respuesta** (JSON/XML).
-\- Los **códigos de error** que puede devolver el servidor.
+    Antes de consumir una API, revisa siempre:
+    
+      * La **documentación oficial** del recurso.
+      * Los **parámetros disponibles** para filtrar datos.
+      * El **formato de respuesta** (JSON/XML).
+      * Los **códigos de error** que puede devolver el servidor.
 
 ---
 

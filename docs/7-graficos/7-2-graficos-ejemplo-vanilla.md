@@ -121,16 +121,16 @@ function dibujarGrafico(ctx, datos) {
 ---
 
 !!! tip "Consejo"
-Este enfoque con **Canvas** te ayuda a comprender cómo se dibujan gráficos “desde cero”.
-Sin embargo, si quieres añadir leyendas, escalas automáticas o varios tipos de gráficos, es más práctico usar una librería como **Chart.js**.
+    Este enfoque con **Canvas** te ayuda a comprender cómo se dibujan gráficos “desde cero”.
+    Sin embargo, si quieres añadir leyendas, escalas automáticas o varios tipos de gráficos, es más práctico usar una librería como **Chart.js**.
 
 ---
 
 ## 📝 Preguntas de repaso
 
 !!! question "Repaso"
-1\. ¿Qué representa el valor `maxValor` en el código del gráfico?
-2\. ¿Por qué normalizamos las alturas de las barras en función del valor máximo?
-3\. ¿Qué función del canvas usamos para dibujar rectángulos (barras)?
-4\. ¿Cómo cambiarías el código para representar el año 2021 en lugar de 2020?
-5\. ¿Qué limitaciones tiene este enfoque frente a una librería especializada en gráficos?
+    1. ¿Qué representa el valor `maxValor` en el código del gráfico?
+    2. ¿Por qué normalizamos las alturas de las barras en función del valor máximo?
+    3. ¿Qué función del canvas usamos para dibujar rectángulos (barras)?
+    4. ¿Cómo cambiarías el código para representar el año 2021 en lugar de 2020?
+    5. ¿Qué limitaciones tiene este enfoque frente a una librería especializada en gráficos?

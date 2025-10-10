@@ -99,20 +99,16 @@ function renderTabla(datos, columnas) {
 ---
 
 !!! tip "Consejo"
-Con JavaScript puro es fácil montar una tabla básica.
-Sin embargo, si quieres añadir **paginación, búsqueda o filtros**, pronto conviene usar una librería como **Tabulator** o **DataTables**, que lo simplifican mucho.
+    Con JavaScript puro es fácil montar una tabla básica.
+    Sin embargo, si quieres añadir **paginación, búsqueda o filtros**, pronto conviene usar una librería como **Tabulator** o **DataTables**, que lo simplifican mucho.
 
 ---
 
 ## 📝 Preguntas de repaso
 
 !!! question "Repaso"
-1\. ¿Qué devuelve la función `cargarCSV()`?
-2\. ¿Cómo obtenemos las cabeceras del CSV en este ejemplo?
-3\. ¿Qué hace `Object.fromEntries` al transformar cada fila?
-4\. ¿Qué etiquetas HTML usamos para diferenciar cabecera (`<thead>`) y cuerpo (`<tbody>`)?
-5\. ¿Qué limitaciones tiene esta tabla si el dataset tiene miles de registros?
-
----
-
-El siguiente paso será ver cómo mejorar esta tabla usando **librerías externas** como Tabulator, para añadir funcionalidades avanzadas.
+    1. ¿Qué devuelve la función `cargarCSV()`?
+    2. ¿Cómo obtenemos las cabeceras del CSV en este ejemplo?
+    3. ¿Qué hace `Object.fromEntries` al transformar cada fila?
+    4. ¿Qué etiquetas HTML usamos para diferenciar cabecera (`<thead>`) y cuerpo (`<tbody>`)?
+    5. ¿Qué limitaciones tiene esta tabla si el dataset tiene miles de registros?

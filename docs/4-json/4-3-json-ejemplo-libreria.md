@@ -14,7 +14,7 @@ En este curso usaremos **CDN** (no hace falta `npm`). Inserta el script en tu HT
 <script type="module" src="main.js"></script>
 ```
 
-> Si más adelante empaquetas con Vite/Webpack, podrás `import axios from "axios"` sin cambiar el resto del código.
+Si más adelante empaquetas con Vite/Webpack, podrás `import axios from "axios"` sin cambiar el resto del código.
 
 ---
 

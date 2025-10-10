@@ -57,19 +57,19 @@ Con estas tres columnas ya podemos situar puntos en un mapa.
 
 * **Vanilla JS (básico)**:
 
-  * Insertar un mapa estático de Google Maps o OpenStreetMap con `<iframe>`.
-  * Solo útil para mostrar un punto o dirección.
+    * Insertar un mapa estático de Google Maps o OpenStreetMap con `<iframe>`.
+    * Solo útil para mostrar un punto o dirección.
 
 * **Leaflet (librería ligera)**:
 
-  * Permite cargar múltiples puntos.
-  * Soporta popups, iconos personalizados y capas.
-  * Es libre, gratuito y muy usado en proyectos educativos.
+    * Permite cargar múltiples puntos.
+    * Soporta popups, iconos personalizados y capas.
+    * Es libre, gratuito y muy usado en proyectos educativos.
 
 * **Otras librerías**:
 
-  * **Mapbox GL JS** (alta calidad visual, requiere API key).
-  * **Google Maps JS API** (muy popular, pero con limitaciones de uso gratuito).
+    * **Mapbox GL JS** (alta calidad visual, requiere API key).
+    * **Google Maps JS API** (muy popular, pero con limitaciones de uso gratuito).
 
 ---
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda cultural · Datos Abiertos JCyL</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9f6f6;
+      padding: 2rem;
+      color: #222;
+    }
+    h1 {
+      color: #ba273b;
+      text-align: center;
+    }
+    .evento {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 700px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .evento h2 {
+      margin: 0 0 .5rem;
+      color: #ba273b;
+    }
+    .evento a {
+      color: #ba273b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .evento a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>🎭 Agenda Cultural — Datos Abiertos JCyL</h1>
+  <div id="eventos">Cargando eventos...</div>
+
+  <script>
+    const API_URL =
+      "https://datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/eventos-de-la-agenda-cultural-categorizados-y-geolocalizados/records?limit=10";
+
+    const PROXY = "https://api.codetabs.com/v1/proxy?quest=";
+
+    async function cargarEventos() {
+      const contenedor = document.getElementById("eventos");
+      contenedor.textContent = "🔄 Cargando eventos...";
+
+      try {
+        const respuesta = await fetch(PROXY + encodeURIComponent(API_URL));
+        if (!respuesta.ok) throw new Error("Error HTTP " + respuesta.status);
+
+        const datos = await respuesta.json();
+
+        contenedor.innerHTML = "";
+        const eventos = datos.results || [];
+
+        if (!eventos.length) {
+          contenedor.innerHTML = "<p>No hay eventos disponibles.</p>";
+          return;
+        }
+
+        for (const ev of eventos) {
+          const div = document.createElement("div");
+          div.className = "evento";
+          div.innerHTML = `
+            <h2>${ev.titulo}</h2>
+            <p><strong>Provincia:</strong> ${ev.nombre_provincia ?? "—"}</p>
+            <p><strong>Lugar:</strong> ${ev.lugar_celebracion ?? "—"}</p>
+            <p><strong>Fecha:</strong> ${ev.fecha_inicio ?? "No disponible"}</p>
+            <p><a href="${ev.enlace_contenido}" target="_blank">Ver más información</a></p>
+          `;
+          contenedor.appendChild(div);
+        }
+      } catch (err) {
+        contenedor.innerHTML = "❌ Error al cargar los eventos.<br>";
+      }
+    }
+
+    cargarEventos();
+  </script>
+</body>
+</html>

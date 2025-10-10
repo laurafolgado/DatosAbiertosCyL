@@ -24,7 +24,7 @@ En este curso usaremos **CDN** (no hace falta `npm`). Inserta los scripts/estilo
 ```
 
 !!! tip "Consejo"
-  Si luego empaquetas con Vite/Webpack, podrás `import Papa from "papaparse"` y `import { Tabulator } from "tabulator-tables"`.
+    Si luego empaquetas con Vite/Webpack, podrás `import Papa from "papaparse"` y `import { Tabulator } from "tabulator-tables"`.
 
 ---
 

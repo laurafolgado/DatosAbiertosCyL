@@ -31,7 +31,7 @@ async function cargarAPI(url) {
 cargarAPI("https://.../api/endpoint").then(data => {
   console.log("Respuesta de la API:", data);
 });
-````
+```
 
 ---
 

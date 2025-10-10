@@ -15,7 +15,7 @@ Usaremos **CDN** para no complicar el entorno. Inserta Axios en tu HTML antes de
 <script type="module" src="main.js"></script>
 ```
 
-> Más adelante, si empaquetas con Vite/Webpack, podrás hacer `import axios from "axios"` sin cambiar nada del resto del código.
+Más adelante, si empaquetas con Vite/Webpack, podrás hacer `import axios from "axios"` sin cambiar nada del resto del código.
 
 ---
 

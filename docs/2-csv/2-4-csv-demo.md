@@ -29,8 +29,8 @@ También puedes verla incrustada aquí:
 
 ---
 
-### ▶️ Demo con librería (`Axios`)
-<a href="../demo/2-csv-librerias/index.html" target="_blank">Abrir demo en vivo (Axios)</a>
+### ▶️ Demo con librería (`Papa Parse + Tabulator`)
+<a href="../demo/2-csv-librerias/index.html" target="_blank">Abrir demo en vivo (Papa Parse + Tabulator)</a>
 
 También puedes verla incrustada aquí:
 

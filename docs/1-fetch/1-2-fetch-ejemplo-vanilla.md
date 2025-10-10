@@ -84,11 +84,12 @@ Esto imprime en consola las 5 primeras marcas de calidad con su nombre y tipo.
 ---
 
 !!! tip "Consejo"
-Cuando trabajes con `fetch`:
-\* Usa `await res.text()` para ficheros planos como `.txt` o `.csv`.
-\* Usa `await res.json()` solo si el archivo realmente es JSON.
-\* Comprueba siempre `res.ok` para detectar errores como `404 Not Found`.
-\* Muestra solo una parte con `.slice()` si el dataset es muy grande.
+    Cuando trabajes con `fetch`:
+
+      * Usa `await res.text()` para ficheros planos como `.txt` o `.csv`.      
+      * Usa `await res.json()` solo si el archivo realmente es JSON.
+      * Comprueba siempre `res.ok` para detectar errores como `404 Not Found`.
+      * Muestra solo una parte con `.slice()` si el dataset es muy grande.
 
 ---
 
