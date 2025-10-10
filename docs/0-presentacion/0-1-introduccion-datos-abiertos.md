@@ -1,15 +1,16 @@
-# 0. Introducción a los Datos Abiertos de la Junta de Castilla y León
+# 0.1. Introducción a los Datos Abiertos de la Junta de Castilla y León
 
-Los **datos abiertos** ("open data") son información pública que cualquier persona puede usar, reutilizar y redistribuir libremente. En Castilla y León, esta iniciativa forma parte de la estrategia de **Gobierno Abierto**, fomentando la transparencia, la innovación y la participación ciudadana.
+Los **datos abiertos** (*open data*) son información pública que cualquier persona puede usar, reutilizar y redistribuir libremente.
+En Castilla y León, esta iniciativa forma parte de la estrategia de **Gobierno Abierto**, fomentando la transparencia, la innovación y la participación ciudadana.
 
 ---
 
 ## 📌 ¿Qué son los datos abiertos y por qué son importantes?
 
-* Facilitan que ciudadanos, empresas e instituciones accedan a información pública para crear valor.
-* Aumentan la **transparencia** y la rendición de cuentas.
+* Permiten que ciudadanos, empresas e instituciones accedan a información pública para **crear valor**.
+* Refuerzan la **transparencia** y la rendición de cuentas.
 * Favorecen la **innovación tecnológica** y la creación de servicios basados en datos.
-* Contribuyen al conocimiento del territorio y al desarrollo social y económico.
+* Contribuyen al conocimiento del territorio y al **desarrollo social y económico**.
 
 ---
 
@@ -23,8 +24,8 @@ La iniciativa de datos abiertos en Castilla y León se apoya en diferentes norma
 
 Además, la Junta ofrece:
 
-* **Guías de Open Data**, sobre formatos, metadatos y publicación.
-* **Buenas prácticas**, para garantizar calidad, interoperabilidad y accesibilidad de los datos.
+* **Guías de Open Data** sobre formatos, metadatos y publicación.
+* **Buenas prácticas** para garantizar calidad, interoperabilidad y accesibilidad de los datos.
 
 ---
 
@@ -32,14 +33,14 @@ Además, la Junta ofrece:
 
 El portal [datosabiertos.jcyl.es](https://datosabiertos.jcyl.es/web/es/iniciativa-datos-abiertos/datos-abiertos.html) ofrece:
 
-* Un catálogo con **múltiples conjuntos de datos** descargables.
+* Un catálogo con **cientos de conjuntos de datos** descargables.
 * Diversos **formatos abiertos**: CSV, JSON, XML, GeoJSON, etc.
 * Información clara sobre **licencias de reutilización**.
 * Documentación, guías y normativa de referencia.
 
 ---
 
-## 📝 Ventajas y retos al trabajar con datos abiertos
+## 📌 Ventajas y retos al trabajar con datos abiertos
 
 | Ventajas                                                 | Retos / dificultades                     |
 | -------------------------------------------------------- | ---------------------------------------- |
@@ -50,8 +51,9 @@ El portal [datosabiertos.jcyl.es](https://datosabiertos.jcyl.es/web/es/iniciativ
 
 ---
 
-!!! tip "Consejo para clase"
-    Antes de trabajar con un dataset revisa su **fecha de actualización**, la **frecuencia de publicación**, las **licencias**, el **formato disponible** y los **metadatos**. Esto te ahorrará sorpresas con datos incompletos o desactualizados.
+!!! tip Consejo
+    Antes de trabajar con un dataset revisa su **fecha de actualización**, la **frecuencia de publicación**, las **licencias**, el **formato disponible** y los **metadatos**.
+    Esto te ahorrará sorpresas con datos incompletos o desactualizados.
 
 ---
 

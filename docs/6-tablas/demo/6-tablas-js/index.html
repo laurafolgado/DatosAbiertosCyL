@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estadísticas de redes sociales · Datos Abiertos JCyL</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8f8f8;
+      margin: 2rem;
+      color: #333;
+    }
+    h1 {
+      color: #ba273b;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.6rem;
+      text-align: left;
+    }
+    th {
+      background: #ba273b;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f9f3f4;
+    }
+    caption {
+      caption-side: top;
+      font-weight: 600;
+      padding: 1rem;
+      color: #ba273b;
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Estadísticas de uso de redes sociales</h1>
+  <div id="tabla"></div>
+
+  <script>
+    // 1) Cargar el CSV
+    async function cargarCSV() {
+      const res = await fetch("./estadisticas-de-uso-de-redes-sociales.csv");
+      if (!res.ok) throw new Error("No se pudo cargar el CSV");
+      const texto = await res.text();
+      console.log("CSV cargado correctamente ✅");
+      return texto;
+    }
+
+    // 2) Parsear CSV con detección automática del separador
+    function parsearCSV(texto) {
+      // detecta el separador más común (, o ;)
+      const separador = texto.includes(";") ? ";" : ",";
+      console.log("Separador detectado:", separador);
+
+      const lineas = texto.trim().split(/\r?\n/);
+      const cabeceras = lineas.shift().split(separador).map(c => c.trim());
+      console.log("Cabeceras detectadas:", cabeceras);
+
+      const datos = lineas.map(linea => {
+        const valores = linea.split(separador).map(v => v.replace(/^"|"$/g, "").trim());
+        return Object.fromEntries(cabeceras.map((c, i) => [c, valores[i] ?? ""]));
+      });
+
+      console.log("Primeros datos:", datos.slice(0, 3));
+      return { cabeceras, datos };
+    }
+
+    // 3) Renderizar tabla accesible
+    function renderTabla(datos, columnas) {
+      const tabla = document.createElement("table");
+      const caption = document.createElement("caption");
+      caption.textContent = "Datos de la encuesta sobre uso de redes sociales en Castilla y León";
+      tabla.appendChild(caption);
+
+      // Cabecera
+      const thead = document.createElement("thead");
+      const trHead = document.createElement("tr");
+      columnas.forEach(col => {
+        const th = document.createElement("th");
+        th.scope = "col";
+        th.textContent = col;
+        trHead.appendChild(th);
+      });
+      thead.appendChild(trHead);
+      tabla.appendChild(thead);
+
+      // Cuerpo
+      const tbody = document.createElement("tbody");
+      datos.forEach(fila => {
+        const tr = document.createElement("tr");
+        columnas.forEach(col => {
+          const td = document.createElement("td");
+          td.textContent = fila[col] || "—";
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      tabla.appendChild(tbody);
+
+      document.getElementById("tabla").appendChild(tabla);
+    }
+
+    // 4) Ponerlo todo junto
+    (async () => {
+      try {
+        const texto = await cargarCSV();
+        const { cabeceras, datos } = parsearCSV(texto);
+
+        // mostramos las primeras columnas si no conocemos los nombres exactos
+        console.log("Cabeceras disponibles:", cabeceras);
+
+        // selecciona las 3 primeras columnas (puedes cambiarlas por nombres concretos)
+        const columnas = cabeceras.slice(0, 3);
+        renderTabla(datos, columnas);
+      } catch (err) {
+        document.getElementById("tabla").innerHTML =
+          `<p style="color:#ba273b;">❌ Error: ${err.message}</p>`;
+        console.error(err);
+      }
+    })();
+  </script>
+</body>
+</html>

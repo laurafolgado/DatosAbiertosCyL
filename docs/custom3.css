@@ -13,7 +13,7 @@
 .md-typeset pre code.language-bash {
     background-color: #1e1e1e; /* Fondo gris oscuro, menos intenso que el negro puro */
     color: #d4d4d4;           /* Texto gris claro */
-    border-left: 4px solid #1984c2; /* Barra azul en el lateral izquierdo */
+    border-left: 4px solid #ba273b; /* Barra azul en el lateral izquierdo */
     border-radius: 4px;       /* Bordes redondeados */
     padding: 12px;            /* Espaciado interno */
     font-family: 'Source Code Pro', monospace; /* Fuente monoespaciada limpia */

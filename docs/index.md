@@ -1,184 +1,59 @@
-# JavaScript - Desarrollo de Aplicaciones Web en Entorno Cliente
+# 🏠 Presentación del proyecto
 
-**👋 ¡Hola! Te doy la bienvenida al curso de JavaScript moderno**: el lenguaje fundamental para crear experiencias dinámicas en la web.
-
-## 🎯 Objetivos del curso
-
-- **Comprender los fundamentos** de JavaScript moderno (ES2023+)
-- Dominar la **sintaxis moderna** (`let`/`const`, funciones flecha, destructuring…)
-- Desarrollar **funciones, objetos y estructuras de control** con eficacia
-- Aplicar **DOM y eventos** para manipular páginas web dinámicamente
-- Utilizar **APIs web** como `fetch`, `localStorage`, `Geolocation`, etc.
-- Escribir **código limpio, modular y mantenible**
-
-## 📚 Nivel del curso
-
-Este material está diseñado para estudiantes de **Desarrollo de Aplicaciones Web**, con conocimientos previos en:
-
-- HTML5 y CSS3
-- Lógica de programación básica
-- Familiaridad con editores de código (por ejemplo, VS Code)
-
-## 🧭 Estructura del curso
-
-### 🟠 1. Conceptos básicos
-
-- 1.0 Introducción a JavaScript
-- 1.0.1 Tu primer script en JavaScript
-- 1.1 Características de JavaScript
-- 1.2 Tu primera aplicación
-- 1.3 JavaScript en HTML
-- 1.4 Entradas y salidas en JavaScript
-- 1.5 Variables
-- 1.6 Operadores
-- 1.7 Control de flujo
-  - 1.7.1 Condicionales
-  - 1.7.2 Bucles básicos
-  - 1.7.3 Bucles avanzados
-  - 1.7.4 Break y continue
-- 1.8 Funciones
-  - 1.8.1 Funciones (I): Fundamentos
-  - 1.8.2 Funciones (II): Uso avanzado
-  - 1.8.3 Funciones (III): Parámetros y cierres
-- 📝 1.9 Ejercicio Trivial
-
-
-### 🟡 2. Uso de los objetos predefinidos del lenguaje JavaScript
-
-- 2.1. Objetos nativos  
-- 2.2. Objetos del navegador  
-- 2.3. Gestión de temporizadores (`setTimeout`, `setInterval`)
-
-### 🟢 3. Funciones, arrays y objetos definidos por el usuario
-
-- 3.1. Funciones  
-- 3.2. Arrays y métodos fundamentales  
-- 3.3. Objetos definidos por el usuario  
-- 3.4. Módulos ES (`import/export`)
-
-### 🔵 4. Interacción con el usuario, eventos y formularios
-
-- 4.1. Eventos (`click`, `input`, etc.)  
-- 4.2. Validación de formularios  
-- 4.3. Almacenamiento local: `WebStorage`
-
-### 🟣 5. Uso del DOM
-
-- 5.1. Recorrer elementos del DOM  
-- 5.2. Editar elementos del DOM  
-- 5.3. Crear elementos del DOM dinámicamente
-
-### 🟤 6. Trabajo con datos y APIs
-
-- 6.1. Promesas  
-- 6.2. Uso de la API `fetch`
-
----
-
-## 🛠️ Requisitos técnicos
-
-Para seguir este curso necesitarás:
-
-- Navegador moderno (Chrome, Firefox, Edge, Arc, etc.)
-- Editor de código (VS Code recomendado o forks como Windsurf, Cursor, etc.)
-- Extensión **Live Server** o similar para ver cambios en tiempo real
-- Conocimientos básicos de terminal
-
-## 🚀 Cómo empezar
-
-1. Crea una carpeta de proyecto:
-```bash
-mkdir javascript
-cd javascript
-code .
-```
-
-2. Crea los archivos base:
-
-    * `index.html`
-   * `main.js`
-   * `style.css`
-
-3. Instala la extensión **Live Server** o **Five Server** en VS Code y abre el archivo `index.html` en el navegador para ver los cambios en tiempo real.
-
----
-
-## 📚 Recursos adicionales
-
-* [Documentación oficial de JavaScript (MDN)](https://developer.mozilla.org/es/docs/Web/JavaScript)
-* [JavaScript.info (manual completo)](https://javascript.info/)
-* [You Don’t Know JS (serie de libros)](https://github.com/getify/You-Dont-Know-JS)
-* [JavaScript Patterns (por Addy Osmani)](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-* [Eloquent JavaScript (por Marijn Haverbeke)](https://eloquentjavascript.net/)
-
----
-
-## ℹ️ Sobre el curso
-
-Este material ha sido desarrollado para el módulo de **Desarrollo de Aplicaciones Web en Entorno Cliente**, con el objetivo de proporcionar una base sólida y moderna sobre el lenguaje JavaScript y sus aplicaciones en el navegador.
-
-**Autora: Laura Folgado Galache**
-
+Te doy la bienvenida a este recurso sobre el **uso de Datos Abiertos de la Junta de Castilla y León** aplicados al desarrollo web.  
+Su objetivo es mostrar, de forma clara y práctica, cómo trabajar con información pública real para crear aplicaciones útiles y actuales haciendo uso de datos abiertos.
 
 
 ---
 
-<div class="cta-buttons">
-  <a href="/fundamentos/introduccion" class="button primary">Comenzar Curso</a>
-  <a href="/proyecto/ejercicios" class="button secondary">Ver Ejercicios</a>
-</div>
+## 🔎 IAura: tu búsqueda con inteligencia artificial:
 
-<style>
-.cta-buttons {
-  margin: 2rem 0;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+Explora de forma interactiva el mundo de los **Datos Abiertos de Castilla y León**.  
+Escribe tu consulta en lenguaje natural y IAura te responderá con ejemplos, explicaciones y referencias prácticas para que entiendas mejor cómo aprovechar esta información pública en tus proyectos web.
 
-.cta-buttons .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
+<p align="center" style="margin-top:1rem;">
+  <a href="buscador-ia/index.html" 
+     style="background:#ba273b; color:#fff; font-weight:600; 
+            text-decoration:none; padding:.75rem 1.5rem; 
+            border-radius:10px; font-size:1rem;">
+    🚀 Ir al buscador IAura
+  </a>
+</p>
 
-.cta-buttons .primary {
-  background-color: #f7df1e;
-  color: #000;
-  border: 2px solid #f7df1e;
-}
+---
 
-.cta-buttons .primary:hover {
-  background-color: #e6cb00;
-  border-color: #e6cb00;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(247, 223, 30, 0.3);
-}
+## 🎯 Objetivo del proyecto
 
-.cta-buttons .secondary {
-  background-color: transparent;
-  color: #2c3e50;
-  border: 2px solid #2c3e50;
-}
+Acercar al alumnado de desarrollo de aplicaciones web de Formación Profesional y Universidad, y a cualquier persona interesada, al **uso real de los datos abiertos**.  
+No se trata de ejemplos inventados, sino de **datasets oficiales** que obligan a enfrentarse a formatos, estructuras y problemas auténticos, como sucede en el mundo profesional.  
 
-.cta-buttons .secondary:hover {
-  background-color: #f8f9fa;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
-}
+---
 
-@media (max-width: 768px) {
-  .cta-buttons {
-    flex-direction: column;
-  }
+## 👥 Destinatarios
 
-  .cta-buttons .button {
-    width: 100%;
-  }
-}
-</style>
+* **Estudiantes de Formación Profesional** y **Universidad** del ámbito de la informática y el desarrollo web.  
+* **Desarrolladoras y desarrolladores** que quieran aprender a consumir y visualizar datos abiertos con JavaScript y librerías habituales.  
+* **Personas curiosas** interesadas en la transparencia, la innovación y la reutilización de información pública.
+
+---
+
+## 🗂️ Cómo se organiza el recurso
+
+Cada lección incluye:
+
+1. Una **introducción teórica** al formato o tecnología (CSV, XML, JSON, APIs…).  
+2. Ejemplos paso a paso con **JavaScript puro** (*vanilla*).  
+3. Una versión con **librerías externas** para simplificar y ampliar las posibilidades.  
+4. Una **demo práctica** basada en datasets del portal de datos abiertos de la Junta de Castilla y León.  
+
+El sitio cuenta además con recursos de apoyo, demos visuales y apartados explicativos sobre la importancia de la transparencia y la participación ciudadana.
+
+---
+
+## 👩‍🏫 Quién está detrás del proyecto
+
+¡Hola! Soy Laura Folgado Galache, **profesora de Desarrollo Web en Entorno Cliente** en el ciclo de grado superior de Desarrollo de aplicaciones web.
+
+He creado este recurso para acercar al alumnado de Formación Profesional y Universidad, a los **retos reales del desarrollo web**, utilizando datos abiertos como herramienta de aprendizaje. 
+ 
+Mi propósito es que cada estudiante aprenda no solo a programar, sino también a **aprovechar la información pública** para crear aplicaciones con impacto social.
