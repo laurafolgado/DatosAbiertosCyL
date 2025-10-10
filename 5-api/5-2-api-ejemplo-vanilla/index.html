@@ -1129,6 +1129,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#2-explorar-la-estructura-y-quedarnos-con-la-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Explorar la estructura y quedarnos con la lista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#3-mapear-los-datos-a-columnas-utiles" class="md-nav__link">
     <span class="md-ellipsis">
       3) Mapear los datos a columnas útiles
@@ -1748,6 +1757,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#2-explorar-la-estructura-y-quedarnos-con-la-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Explorar la estructura y quedarnos con la lista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#3-mapear-los-datos-a-columnas-utiles" class="md-nav__link">
     <span class="md-ellipsis">
       3) Mapear los datos a columnas útiles
@@ -1830,23 +1848,18 @@ Trabajaremos con un recurso del portal de <strong>Datos Abiertos de la Junta de 
 <span class="nx">cargarAPI</span><span class="p">(</span><span class="s2">&quot;https://.../api/endpoint&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Respuesta de la API:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
 <span class="p">});</span>
-<span class="sb">````</span>
+</code></pre></div>
+<hr />
+<h3 id="2-explorar-la-estructura-y-quedarnos-con-la-lista">2) Explorar la estructura y quedarnos con la lista</h3>
+<p>En muchos casos, la respuesta de la API tiene una clave como <code>resultados</code>, <code>items</code> o similar.
+Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">obtenerLista</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Si ya es un array, lo devolvemos directamente</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
 
-<span class="o">---</span>
-
-<span class="err">###</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="nx">Explorar</span><span class="w"> </span><span class="nx">la</span><span class="w"> </span><span class="nx">estructura</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="nx">quedarnos</span><span class="w"> </span><span class="nx">con</span><span class="w"> </span><span class="nx">la</span><span class="w"> </span><span class="nx">lista</span>
-
-<span class="nx">En</span><span class="w"> </span><span class="nx">muchos</span><span class="w"> </span><span class="nx">casos</span><span class="p">,</span><span class="w"> </span><span class="nx">la</span><span class="w"> </span><span class="nx">respuesta</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">la</span><span class="w"> </span><span class="nx">API</span><span class="w"> </span><span class="nx">tiene</span><span class="w"> </span><span class="nx">una</span><span class="w"> </span><span class="nx">clave</span><span class="w"> </span><span class="nx">como</span><span class="w"> </span><span class="sb">`resultados`</span><span class="p">,</span><span class="w"> </span><span class="sb">`items`</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="nx">similar</span><span class="p">.</span>
-<span class="nx">Ejemplo</span><span class="o">:</span>
-
-<span class="sb">```js</span>
-<span class="sb">function obtenerLista(data) {</span>
-<span class="sb">  // Si ya es un array, lo devolvemos directamente</span>
-<span class="sb">  if (Array.isArray(data)) return data;</span>
-
-<span class="sb">  // Si viene dentro de un objeto, intentamos extraer la lista</span>
-<span class="sb">  return data?.resultados ?? [];</span>
-<span class="sb">}</span>
+<span class="w">  </span><span class="c1">// Si viene dentro de un objeto, intentamos extraer la lista</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="o">?</span><span class="p">.</span><span class="nx">resultados</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="p">[];</span>
+<span class="p">}</span>
 </code></pre></div>
 <hr />
 <h3 id="3-mapear-los-datos-a-columnas-utiles">3) Mapear los datos a columnas útiles</h3>

@@ -1854,12 +1854,14 @@ El resultado ya es un <strong>objeto JavaScript</strong> que podemos recorrer.</
 <hr />
 <div class="admonition tip">
 <p class="admonition-title">Consejo</p>
+<p>Cuando trabajes con <code>fetch</code>:</p>
+<ul>
+<li>Usa <code>await res.text()</code> para ficheros planos como <code>.txt</code> o <code>.csv</code>.      </li>
+<li>Usa <code>await res.json()</code> solo si el archivo realmente es JSON.</li>
+<li>Comprueba siempre <code>res.ok</code> para detectar errores como <code>404 Not Found</code>.</li>
+<li>Muestra solo una parte con <code>.slice()</code> si el dataset es muy grande.</li>
+</ul>
 </div>
-<p>Cuando trabajes con <code>fetch</code>:
-* Usa <code>await res.text()</code> para ficheros planos como <code>.txt</code> o <code>.csv</code>.
-* Usa <code>await res.json()</code> solo si el archivo realmente es JSON.
-* Comprueba siempre <code>res.ok</code> para detectar errores como <code>404 Not Found</code>.
-* Muestra solo una parte con <code>.slice()</code> si el dataset es muy grande.</p>
 <hr />
 <h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
 <div class="admonition question">

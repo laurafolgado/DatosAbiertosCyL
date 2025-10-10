@@ -1784,9 +1784,7 @@ Después aprenderemos a consumirlas con <strong>JavaScript puro</strong> y con l
 <p>Una <strong>API REST</strong> (Application Programming Interface – Representational State Transfer) es un servicio web que expone datos y operaciones a través del protocolo <strong>HTTP</strong>.<br />
 En lugar de descargar un archivo fijo (CSV, XML, JSON), hacemos una <strong>solicitud a una URL</strong> con ciertos parámetros, y la API nos devuelve una <strong>respuesta dinámica</strong>.</p>
 <p>Ejemplo genérico de consulta:</p>
-<p>```</p>
-<p><a href="https://servidor.datosabiertos.jcyl.es/servicio/recurso?param1=valor1&amp;param2=valor2">https://servidor.datosabiertos.jcyl.es/servicio/recurso?param1=valor1&amp;param2=valor2</a></p>
-<p>````</p>
+<p><code>https://servidor.datosabiertos.jcyl.es/servicio/recurso?param1=valor1\&amp;param2=valor2</code></p>
 <hr />
 <h2 id="como-funcionan-las-apis-rest-en-los-datos-abiertos">📌 ¿Cómo funcionan las APIs REST en los datos abiertos?</h2>
 <ul>
@@ -1801,23 +1799,22 @@ En lugar de descargar un archivo fijo (CSV, XML, JSON), hacemos una <strong>soli
 <h2 id="ejemplo-de-respuesta">📌 Ejemplo de respuesta</h2>
 <p>Una petición correcta suele devolver un objeto en JSON con una lista de elementos.<br />
 Ejemplo simplificado:</p>
-<p>```json
-{
-  "correcto": true,
-  "mensaje": "Lista de actividades enviada correctamente",
-  "resultados": [
+<div class="highlight"><pre><span></span><code>{
+  &quot;correcto&quot;: true,
+  &quot;mensaje&quot;: &quot;Lista de actividades enviada correctamente&quot;,
+  &quot;resultados&quot;: [
     {
-      "nombre": "Curso de iniciación a la informática",
-      "fechaInicio": "2025-03-01",
-      "fechaFin": "2025-03-05",
-      "municipio": "León",
-      "provincia": "León",
-      "horas": 20,
-      "plazas": 15
+      &quot;nombre&quot;: &quot;Curso de iniciación a la informática&quot;,
+      &quot;fechaInicio&quot;: &quot;2025-03-01&quot;,
+      &quot;fechaFin&quot;: &quot;2025-03-05&quot;,
+      &quot;municipio&quot;: &quot;León&quot;,
+      &quot;provincia&quot;: &quot;León&quot;,
+      &quot;horas&quot;: 20,
+      &quot;plazas&quot;: 15
     }
   ]
 }
-````</p>
+</code></pre></div>
 <hr />
 <h2 id="ventajas-de-usar-apis-rest">📌 Ventajas de usar APIs REST</h2>
 <ul>
@@ -1837,12 +1834,14 @@ Ejemplo simplificado:</p>
 <hr />
 <div class="admonition tip">
 <p class="admonition-title">Consejo</p>
+<p>Antes de consumir una API, revisa siempre:</p>
+<ul>
+<li>La <strong>documentación oficial</strong> del recurso.</li>
+<li>Los <strong>parámetros disponibles</strong> para filtrar datos.</li>
+<li>El <strong>formato de respuesta</strong> (JSON/XML).</li>
+<li>Los <strong>códigos de error</strong> que puede devolver el servidor.</li>
+</ul>
 </div>
-<p>Antes de consumir una API, revisa siempre:
-- La <strong>documentación oficial</strong> del recurso.
-- Los <strong>parámetros disponibles</strong> para filtrar datos.
-- El <strong>formato de respuesta</strong> (JSON/XML).
-- Los <strong>códigos de error</strong> que puede devolver el servidor.</p>
 <hr />
 <h2 id="preguntas-de-repaso">📝 Preguntas de repaso</h2>
 <div class="admonition question">
