@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📊 Gráfico de uso de redes sociales – Datos Abiertos JCyL</title>
+  <style>
+    :root {
+      --primary: #ba273b;
+      --bg: #f8f8f8;
+    }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { color: var(--primary); margin-bottom: 0.5rem; }
+    p.subtitle { color: #555; margin-bottom: 2rem; }
+    #grafico {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Uso de redes sociales</h1>
+  <p class="subtitle">Ejemplo con Canvas (Datos Abiertos JCyL)</p>
+
+  <canvas id="grafico" width="800" height="450"></canvas>
+
+  <script>
+    async function cargarCSV() {
+      const res = await fetch("./estadisticas-de-uso-de-redes-sociales.csv");
+      const texto = await res.text();
+      const sep = texto.includes(";") ? ";" : ",";
+      const lineas = texto.trim().split(/\r?\n/);
+      const cabeceras = lineas.shift().split(sep).map(c => c.trim());
+      const datos = lineas.map(l => {
+        const valores = l.split(sep).map(v => v.replace(/^"|"$/g, "").trim());
+        return Object.fromEntries(cabeceras.map((c, i) => [c, valores[i] ?? ""]));
+      });
+      return datos;
+    }
+
+    function normalizarTexto(t) {
+      return t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    function detectarColumnas(datos) {
+      const columnas = Object.keys(datos[0]);
+      const colAno = columnas.find(c => /ano|año/i.test(c)) || columnas[0];
+      const colRed = columnas.find(c => /red/i.test(c)) || columnas[1];
+      const colPorcentaje = columnas.find(c => /porcentaje/i.test(c)) || columnas[columnas.length - 1];
+      return { colAno, colRed, colPorcentaje };
+    }
+
+    function filtrarPorAno(datos, colAno, ano) {
+      return datos.filter(d => d[colAno].trim() === ano);
+    }
+
+    function dibujarGrafico(ctx, datos, colRed, colPorcentaje, ano) {
+      const ancho = ctx.canvas.width;
+      const alto = ctx.canvas.height;
+      ctx.clearRect(0, 0, ancho, alto);
+
+      const margen = 60;
+      const anchoBarra = (ancho - 2 * margen) / datos.length;
+      const maxValor = Math.max(...datos.map(d => parseFloat(d[colPorcentaje]) || 0));
+
+      // Ejes
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(margen, margen);
+      ctx.lineTo(margen, alto - margen);
+      ctx.lineTo(ancho - margen, alto - margen);
+      ctx.stroke();
+
+      // Etiquetas de ejes
+      ctx.font = "16px Inter";
+      ctx.fillStyle = "#111";
+      ctx.fillText(`Porcentaje de uso (%) – ${ano}`, 80, 30);
+
+      // Dibujar barras
+      datos.forEach((d, i) => {
+        const valor = parseFloat(d[colPorcentaje]) || 0;
+        const altura = (valor / maxValor) * (alto - 2 * margen);
+        const x = margen + i * anchoBarra + anchoBarra * 0.2;
+        const y = alto - margen - altura;
+
+        ctx.fillStyle = "#ba273b";
+        ctx.fillRect(x, y, anchoBarra * 0.6, altura);
+
+        // Etiquetas
+        ctx.fillStyle = "#000";
+        ctx.font = "12px Inter";
+        ctx.save();
+        ctx.translate(x + anchoBarra * 0.3, alto - margen + 10);
+        ctx.rotate(-Math.PI / 4);
+        ctx.fillText(d[colRed], 0, 0);
+        ctx.restore();
+        ctx.textAlign = "center";
+        ctx.fillText(valor + "%", x + anchoBarra * 0.3, y - 5);
+      });
+    }
+
+    (async () => {
+      const datos = await cargarCSV();
+      const { colAno, colRed, colPorcentaje } = detectarColumnas(datos);
+
+      // Buscar el año más reciente automáticamente
+      const anos = [...new Set(datos.map(d => d[colAno].trim()))].filter(a => a !== "");
+      const ano = anos.sort().pop(); // último (más reciente)
+
+      const datosAno = filtrarPorAno(datos, colAno, ano);
+      const ctx = document.getElementById("grafico").getContext("2d");
+      dibujarGrafico(ctx, datosAno, colRed, colPorcentaje, ano);
+    })();
+  </script>
+</body>
+</html>
