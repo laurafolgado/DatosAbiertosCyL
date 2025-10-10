@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa básico – Primer centro (Datos Abiertos JCyL)</title>
+
+  <style>
+    :root {
+      --primary: #ba273b;
+      --bg: #f9ecee;
+    }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    p.subtitle {
+      margin-top: 0;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    iframe {
+      border: none;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .info {
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem;
+      max-width: 600px;
+      text-align: left;
+    }
+    .info h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+    .info p {
+      margin: 0.25rem 0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗺️ Centros docentes en Castilla y León</h1>
+  <p class="subtitle">Ejemplo con JavaScript y OpenStreetMap</p>
+
+  <iframe id="mapa" loading="lazy"></iframe>
+  <div class="info" id="infoCentro" hidden></div>
+
+  <script>
+    const CSV_URL = "./directorio-de-centros-docentes.csv";
+
+    async function cargarCSV() {
+      const res = await fetch(CSV_URL);
+      const texto = await res.text();
+
+      // Detectar delimitador automáticamente
+      const primera = texto.split(/\r?\n/)[0];
+      const sep = (primera.split(";").length > primera.split(",").length) ? ";" : ",";
+
+      const lineas = texto.trim().split(/\r?\n/);
+      const cabeceras = lineas.shift().split(sep).map(c => c.trim());
+
+      return lineas.map(linea => {
+        const valores = linea.split(sep).map(v => v.replace(/^"|"$/g, "").trim());
+        return Object.fromEntries(cabeceras.map((c, i) => [c, valores[i] ?? ""]));
+      });
+    }
+
+    function obtenerPrimerCentro(datos) {
+      // Detectar posibles nombres de columna
+      const latKey = Object.keys(datos[0]).find(k => /lat/i.test(k));
+      const lonKey = Object.keys(datos[0]).find(k => /lon/i.test(k));
+      const nombreKey = Object.keys(datos[0]).find(k => /denominaci/i.test(k) || /nombre/i.test(k));
+      const muniKey = Object.keys(datos[0]).find(k => /munic/i.test(k));
+      const provKey = Object.keys(datos[0]).find(k => /provin/i.test(k));
+
+      const centro = datos.find(d => d[latKey] && d[lonKey]);
+      if (!centro) return null;
+
+      return {
+        nombre: centro[nombreKey] || "Centro sin nombre",
+        municipio: centro[muniKey] || "No indicado",
+        provincia: centro[provKey] || "No indicada",
+        lat: parseFloat(centro[latKey]),
+        lon: parseFloat(centro[lonKey])
+      };
+    }
+
+    function mostrarCentro(centro) {
+      const mapaURL = `https://www.openstreetmap.org/export/embed.html?bbox=${centro.lon-0.01},${centro.lat-0.01},${centro.lon+0.01},${centro.lat+0.01}&layer=mapnik&marker=${centro.lat},${centro.lon}`;
+      document.getElementById("mapa").src = mapaURL;
+
+      const div = document.getElementById("infoCentro");
+      div.hidden = false;
+      div.innerHTML = `
+        <h2>${centro.nombre}</h2>
+        <p><strong>Municipio:</strong> ${centro.municipio}</p>
+        <p><strong>Provincia:</strong> ${centro.provincia}</p>
+        <p><strong>Latitud:</strong> ${centro.lat.toFixed(5)}, <strong>Longitud:</strong> ${centro.lon.toFixed(5)}</p>
+      `;
+    }
+
+    (async () => {
+      try {
+        const datos = await cargarCSV();
+        const centro = obtenerPrimerCentro(datos);
+
+        if (centro) {
+          mostrarCentro(centro);
+          console.log("Centro mostrado:", centro);
+        } else {
+          document.getElementById("infoCentro").hidden = false;
+          document.getElementById("infoCentro").innerHTML =
+            "<p>No se encontró ningún centro con coordenadas válidas.</p>";
+        }
+      } catch (err) {
+        console.error("Error:", err);
+        const div = document.getElementById("infoCentro");
+        div.hidden = false;
+        div.innerHTML = "<p>❌ Error al cargar el CSV o generar el mapa.</p>";
+      }
+    })();
+  </script>
+</body>
+</html>
