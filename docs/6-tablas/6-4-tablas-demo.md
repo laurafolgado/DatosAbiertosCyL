@@ -33,7 +33,7 @@ También puedes verla incrustada aquí:
 
 ---
 
-### ▶️ Demo con librería (`Tabulator`)
+### ▶️ Demo con librería (`Tabulatorr`)
 <a href="../demo/6-tablas-librerias/index.html" target="_blank">Abrir demo en vivo (Tabulator)</a>
 
 También puedes verla incrustada aquí:
