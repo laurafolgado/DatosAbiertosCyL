@@ -33,8 +33,8 @@ También puedes verla incrustada aquí:
 
 ---
 
-### ▶️ Demo con librería (`Tabulatorre`)
-<a href="../demo/7-graficos-librerias/index.html" target="_blank">Abrir demo en vivo (Tabulator)</a>
+### ▶️ Demo con librería (`Chart.js`)
+<a href="../demo/7-graficos-librerias/index.html" target="_blank">Abrir demo en vivo (Chart.js)</a>
 
 También puedes verla incrustada aquí:
 
