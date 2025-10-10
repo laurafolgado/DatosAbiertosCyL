@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabla interactiva – Datos Abiertos JCyL</title>
+
+  <!-- CSS de Tabulator -->
+  <link href="https://unpkg.com/tabulator-tables@5.6.2/dist/css/tabulator.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #ba273b;
+      --primary-dark: #8f1f2d;
+      --bg-light: #f9f9f9;
+      --border: #ddd;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg-light);
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    #tabla-redes {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Personalización del tema Tabulator */
+    .tabulator {
+      border: none !important;
+      font-size: 15px;
+    }
+
+    .tabulator-header {
+      background-color: var(--primary) !important;
+      color: white !important;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .tabulator-row {
+      border-bottom: 1px solid #eee;
+    }
+
+    .tabulator-row:hover {
+      background-color: #faf6f6 !important;
+    }
+
+    .tabulator .tabulator-footer {
+      background: #fafafa;
+      border-top: 1px solid #ddd;
+    }
+
+    .tabulator .tabulator-paginator button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.3rem 0.6rem;
+      font-weight: 500;
+    }
+
+    .tabulator .tabulator-paginator button:hover {
+      background: var(--primary-dark);
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Estadísticas de uso de redes sociales</h1>
+  <p class="subtitle">
+    Ejemplo de tabla interactiva generada con la librería <strong>Tabulator</strong>.<br>
+    Permite ordenar, filtrar y paginar los datos de forma automática.
+  </p>
+
+  <div id="tabla-redes"></div>
+
+  <!-- JS de Tabulator -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/6.3.1/js/tabulator.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      async function cargarCSV() {
+        const res = await fetch("./estadisticas-de-uso-de-redes-sociales.csv");
+        if (!res.ok) throw new Error("No se pudo cargar el CSV");
+        const texto = await res.text();
+        const separador = texto.includes(";") ? ";" : ",";
+        const lineas = texto.trim().split(/\r?\n/);
+        const cabeceras = lineas.shift().split(separador).map(c => c.trim());
+        const datos = lineas.map(linea => {
+          const valores = linea.split(separador).map(v => v.replace(/^"|"$/g, "").trim());
+          return Object.fromEntries(cabeceras.map((c, i) => [c, valores[i] ?? ""]));
+        });
+        return { cabeceras, datos };
+      }
+
+      try {
+        const { cabeceras, datos } = await cargarCSV();
+
+        const columnas = cabeceras.map(nombre => {
+          if (/año/i.test(nombre)) return { title: "Año", field: nombre, sorter: "number", widthGrow: 0.8, headerFilter: "input" };
+          if (/red/i.test(nombre)) return { title: "Red social", field: nombre, sorter: "string", widthGrow: 1.5, headerFilter: "input" };
+          if (/porcentaje/i.test(nombre)) return { title: "Porcentaje (%)", field: nombre, sorter: "number", hozAlign: "right", widthGrow: 0.8 };
+          return { title: nombre, field: nombre, widthGrow: 1 };
+        });
+
+        new Tabulator("#tabla-redes", {
+          data: datos,
+          layout: "fitDataStretch",
+          pagination: "local",
+          paginationSize: 10,
+          columns: columnas,
+          responsiveLayout: "collapse",
+          placeholder: "No hay datos disponibles",
+          height: "auto",
+        });
+
+      } catch (err) {
+        document.getElementById("tabla-redes").innerHTML =
+          `<p style="color:#ba273b; text-align:center;">❌ Error al cargar la tabla: ${err.message}</p>`;
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

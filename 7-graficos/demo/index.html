@@ -166,7 +166,7 @@
 
   (async () => {
     try {
-      const { headers, data, delimiter } = await loadCSV("./estadisticas-de-uso-de-redes-sociales.csv");
+      const { headers, data, delimiter } = await loadCSV("./estadisticas-uso-redes-sociales.csv");
       console.log("Cabeceras:", headers, "Delimitador:", delimiter);
 
       const cols = detectColumns(headers, data);
