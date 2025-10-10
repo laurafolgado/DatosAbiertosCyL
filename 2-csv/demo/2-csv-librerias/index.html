@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo (Axios) · Hostelería a domicilio (CSV)</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    :root { color-scheme: light dark; --rojo:#ba273b; }
+    body { font-family: system-ui, sans-serif; margin: 1rem; line-height: 1.5; }
+    h1 { margin: 0 0 .5rem; font-size: 1.2rem; color: var(--rojo); }
+    .hint { opacity:.8; font-size:.95rem; margin: .25rem 0 1rem; }
+    input[type="search"]{ padding:.5rem .6rem; border:1px solid #ccc; border-radius:.5rem; width: 100%; max-width: 420px; }
+    table { width: 100%; border-collapse: collapse; margin-top: .75rem; font-size: .95rem; }
+    thead th { text-align:left; border-bottom:2px solid #eee; padding:.5rem; }
+    tbody td { border-bottom:1px solid #f0f0f0; padding:.45rem; vertical-align: top; }
+    tbody tr:hover { background: rgba(186,39,59,.06); }
+    footer { margin-top: .75rem; opacity:.8; font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Hostelería a domicilio (CSV · JCyL)</h1>
+  <p class="hint">Versión con <strong>Axios</strong>: cargar, parsear y mostrar. Incluye buscador global.</p>
+
+  <input id="q" type="search" placeholder="Buscar en cualquier columna…" aria-label="Buscar" />
+  <div id="info" class="hint" aria-live="polite">Cargando…</div>
+
+  <table id="tabla" hidden>
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+
+  <footer>Fuente: Datos Abiertos de la Junta de Castilla y León · Dataset “Hostelería a domicilio”.</footer>
+
+  <script>
+    const CSV_URL = "./hosteleria-a-domicilio.csv";
+    const q = document.getElementById("q");
+    const info = document.getElementById("info");
+    const tabla = document.getElementById("tabla");
+    const thead = tabla.querySelector("thead");
+    const tbody = tabla.querySelector("tbody");
+
+    // 1) Descargar el CSV con Axios
+    axios.get(CSV_URL)
+      .then(response => {
+        const txt = response.data;
+
+        // 2) Detectar separador (coma o punto y coma)
+        const firstLine = txt.split(/\r?\n/)[0] ?? "";
+        const delimiter = (firstLine.split(";").length > firstLine.split(",").length) ? ";" : ",";
+
+        // 3) Parsear CSV manualmente
+        const rows = [];
+        for (const line of txt.replace(/\r\n?/g, "\n").split("\n")) {
+          if (!line.trim()) continue;
+          const out = [];
+          let cell = "", inQ = false;
+          for (let i = 0; i < line.length; i++) {
+            const ch = line[i];
+            if (inQ) {
+              if (ch === '"' && line[i + 1] === '"') { cell += '"'; i++; }
+              else if (ch === '"') { inQ = false; }
+              else cell += ch;
+            } else {
+              if (ch === '"') inQ = true;
+              else if (ch === delimiter) { out.push(cell); cell = ""; }
+              else cell += ch;
+            }
+          }
+          out.push(cell);
+          rows.push(out);
+        }
+
+        if (!rows.length) throw new Error("CSV vacío.");
+        const headers = rows.shift().map(h => h.trim());
+        const data = rows.map(r => Object.fromEntries(headers.map((h, i) => [h, r[i] ?? ""])));
+
+        // 4) Pintar cabecera
+        thead.innerHTML = "";
+        const trH = document.createElement("tr");
+        headers.forEach(h => {
+          const th = document.createElement("th");
+          th.textContent = h;
+          trH.appendChild(th);
+        });
+        thead.appendChild(trH);
+
+        // 5) Función de pintado de cuerpo
+        const render = (filas) => {
+          tbody.innerHTML = "";
+          filas.forEach(obj => {
+            const tr = document.createElement("tr");
+            headers.forEach(h => {
+              const td = document.createElement("td");
+              td.textContent = obj[h] ?? "";
+              tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+          });
+          info.textContent = `${filas.length} registros`;
+          tabla.hidden = false;
+        };
+
+        // 6) Búsqueda global
+        const matches = (obj, term) =>
+          Object.values(obj).some(v => String(v ?? "").toLowerCase().includes(term));
+        const applyFilter = () => {
+          const term = q.value.trim().toLowerCase();
+          render(term ? data.filter(d => matches(d, term)) : data);
+        };
+
+        q.addEventListener("input", applyFilter);
+        render(data);
+      })
+      .catch(err => {
+        console.error(err);
+        info.textContent = "❌ No se pudo cargar el CSV. Abre con servidor local y revisa la ruta.";
+      });
+  </script>
+</body>
+</html>
