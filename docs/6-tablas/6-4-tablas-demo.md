@@ -17,8 +17,8 @@ En esta demo mostramos el dataset de **estadísticas de uso de redes sociales** 
 ---
 
 !!! tip "Consejo"
-Con Tabulator puedes añadir filtros avanzados y exportación de datos.
-Revisa la documentación si quieres ir más allá de lo mostrado aquí.
+    Con Tabulator puedes añadir filtros avanzados y exportación de datos.
+    Revisa la documentación si quieres ir más allá de lo mostrado aquí.
 
 ---
 
